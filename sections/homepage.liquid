@@ -12,13 +12,9 @@
 -->
 
 <style>
-/* ===== FULL-PAGE LIVING GRADIENT ===== */
-body{background:linear-gradient(135deg,#DBEAFE 0%,#EDE9FE 20%,#CFFAFE 40%,#DBEAFE 60%,#F3E8FF 80%,#DBEAFE 100%);background-size:400% 400%;animation:bg-flow 30s ease infinite}
-@keyframes bg-flow{0%{background-position:0% 50%}25%{background-position:50% 0%}50%{background-position:100% 50%}75%{background-position:50% 100%}100%{background-position:0% 50%}}
-/* ===== DOT GRID TEXTURE ===== */
-body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(99,102,241,.04) 1px,transparent 1px);background-size:28px 28px}
-/* ===== SUBTLE GRAIN ===== */
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:99998;opacity:0.018;background-image:repeating-conic-gradient(rgba(0,0,0,.06) 0% 25%,transparent 0% 50%);background-size:3px 3px}
+/* ===== FULL-PAGE LIVING GRADIENT (on body, behind everything) ===== */
+body{background:#F0F4FF}
+@keyframes body-glow{0%{background-position:0% 50%}25%{background-position:50% 0%}50%{background-position:100% 50%}75%{background-position:50% 100%}100%{background-position:0% 50%}}
 /* ========== SECTION: HERO ========== */
 ._1e547 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
 ._1e547{position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(180deg,#DBEAFE 0%,#D4DAFF 50%,#DDD0F5 100%);overflow:hidden}
