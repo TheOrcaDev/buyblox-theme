@@ -15,10 +15,9 @@
 /* ===== FULL-PAGE LIVING GRADIENT (on body, behind everything) ===== */
 body{background:#F0F4FF}
 @keyframes body-glow{0%{background-position:0% 50%}25%{background-position:50% 0%}50%{background-position:100% 50%}75%{background-position:50% 100%}100%{background-position:0% 50%}}
-@keyframes section-glow{0%{background-position:0% 50%}33%{background-position:100% 0%}66%{background-position:50% 100%}100%{background-position:0% 50%}}
 /* ========== SECTION: HERO ========== */
 ._1e547 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
-._1e547{position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(135deg,#DBEAFE 0%,#E0E7FF 20%,#EDE9FE 40%,#FCE7F3 60%,#E0F2FE 80%,#DBEAFE 100%);background-size:300% 300%;animation:section-glow 18s ease infinite;overflow:hidden}
+._1e547{position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(180deg,#DBEAFE 0%,#D4DAFF 50%,#DDD0F5 100%);overflow:hidden}
 
 
 /* ===== GRADIENT MESH ===== */
@@ -57,7 +56,7 @@ body{background:#F0F4FF}
 
 
 /* ===== BOTTOM FADE ===== */
-._0ac44{position:absolute;bottom:0;left:0;width:100%;height:80px;background:linear-gradient(180deg,transparent 0%,#E0E7FF 100%);pointer-events:none;z-index:7}
+._0ac44{position:absolute;bottom:0;left:0;width:100%;height:80px;background:linear-gradient(180deg,transparent 0%,#D4DAFF 100%);pointer-events:none;z-index:7}
 
 /* ===== MAIN CONTENT ===== */
 ._d389b{position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:clamp(30px,6vw,60px) clamp(20px,4vw,40px) clamp(50px,6vw,80px);text-align:center}
@@ -271,8 +270,8 @@ body{background:#F0F4FF}
 
 /* ========== SECTION: FEATURED PRODUCTS ========== */
 ._99e1a *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
-._99e1a{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--text-light:#64748B;--border:#E2E8F0;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(135deg,#E0E7FF 0%,#EDE9FE 20%,#FCE7F3 40%,#E0F2FE 60%,#EEF2FF 80%,#E0E7FF 100%);background-size:300% 300%;animation:section-glow 22s ease infinite;animation-delay:-5s;overflow:hidden;margin-top:-1px}
-._025ac{position:absolute;top:-1px;left:0;width:100%;height:120px;z-index:1;pointer-events:none}
+._99e1a{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--text-light:#64748B;--border:#E2E8F0;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(180deg,#D4DAFF 0%,#DADAFF 40%,#DDD0F5 100%);overflow:hidden;margin-top:-1px}
+._025ac{display:none;position:absolute;top:-1px;left:0;width:100%;height:120px;z-index:1;pointer-events:none}
 ._025ac svg{position:absolute;top:0;left:0;width:100%;height:100%}
 ._61b61{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
 ._476a0{position:absolute;top:-20px;color:#9CA3AF;opacity:0;animation:bbf-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
@@ -365,7 +364,7 @@ body{background:#F0F4FF}
 
 /* ========== SECTION: HOW IT WORKS ========== */
 ._fc821 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
-._fc821{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--light-gray:#F5F5F5;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(135deg,#EDE9FE 0%,#E0F2FE 20%,#E0E7FF 40%,#FCE7F3 60%,#EEF2FF 80%,#EDE9FE 100%);background-size:300% 300%;animation:section-glow 20s ease infinite;animation-delay:-10s;overflow:hidden}
+._fc821{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--light-gray:#F5F5F5;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:linear-gradient(180deg,#DDD0F5 0%,#D6DCFF 40%,#D4DAFF 100%);overflow:hidden}
 ._99e32{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
 ._584bb{position:absolute;top:-20px;color:#9CA3AF;opacity:0;animation:bbh-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
 ._584bb:nth-child(1){left:5%;font-size:14px;animation-duration:14s;animation-delay:0s}
@@ -432,7 +431,7 @@ body{background:#F0F4FF}
 @keyframes butterfly-float{0%{left:-300px;top:12%;transform:rotate(-6deg) scale(0.5);opacity:0}10%{opacity:1;transform:rotate(-6deg) scale(1)}30%{top:8%;transform:rotate(-2deg) scale(1.05)}50%{top:15%;transform:rotate(4deg) scale(1.1)}70%{top:6%;transform:rotate(-3deg) scale(1.05)}90%{opacity:1}100%{left:calc(100% + 300px);top:10%;transform:rotate(-4deg) scale(0.9);opacity:0}}
 ._04b48{position:fixed;pointer-events:none;z-index:2147483646;font-size:28px;color:#FFF;animation:butterfly-trail-fall 2.5s ease-out forwards;filter:drop-shadow(0 0 8px rgba(37,99,235,.5)) drop-shadow(0 0 12px rgba(59,130,246,.4))}
 @keyframes butterfly-trail-fall{0%{transform:translateY(0) rotate(0deg) scale(1);opacity:1}100%{transform:translateY(180px) rotate(360deg) scale(0.2);opacity:0}}
-._9fecd{position:absolute;bottom:0;left:0;width:100%;height:100px;z-index:1;pointer-events:none}
+._9fecd{display:none;position:absolute;bottom:0;left:0;width:100%;height:100px;z-index:1;pointer-events:none}
 ._9fecd svg{position:absolute;bottom:0;left:0;width:100%;height:100%}
 @media (max-width:767px){._ac19c{gap:32px}._68c40{padding:clamp(30px,5vw,40px) clamp(16px,3vw,20px) clamp(20px,3vw,30px)}._1ef0d{padding:48px 24px 32px}._1ef0d::before{height:22px;border-image-width:calc(22px / 3);-webkit-mask-image:radial-gradient(circle 30px at 50% calc(100% + 10px), transparent 100%, black 100%);mask-image:radial-gradient(circle 30px at 50% calc(100% + 10px), transparent 100%, black 100%)}._0bba3{width:48px;height:48px;font-size:22px;top:-16px}._c7a27{width:44px;height:44px;margin:10px auto}._9f7c6{margin-top:40px}._416ca{gap:20px}._4ee32{height:160px}._605d9::before{height:20px;border-image-width:calc(20px / 3)}._a004e{top:-45px;width:40px;height:40px;font-size:20px}._8e588{transform:scale(0.7)}}
 @media (max-width:480px){._fc0c1{font-size:18px}._a3b05{font-size:13px}._0de19{font-size:17px}._1db54{font-size:13px}}
@@ -455,10 +454,7 @@ body{background:#F0F4FF}
   left: 50%;
   margin-left: -50vw;
   padding: 0;
-  background: linear-gradient(135deg, #E0E7FF 0%, #FCE7F3 20%, #DBEAFE 40%, #E0F2FE 60%, #EDE9FE 80%, #E0E7FF 100%);
-  background-size: 300% 300%;
-  animation: section-glow 24s ease infinite;
-  animation-delay: -8s;
+  background: linear-gradient(180deg, #D4DAFF 0%, #D8D4FF 40%, #DBEAFE 100%);
   overflow: hidden;
 }
 
@@ -984,6 +980,7 @@ body{background:#F0F4FF}
 
 /* Bottom meadow transition */
 ._69f80 {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1063,10 +1060,7 @@ body{background:#F0F4FF}
   left: 50%;
   margin-left: -50vw;
   padding: 0;
-  background: linear-gradient(135deg, #DBEAFE 0%, #E0F2FE 20%, #EDE9FE 40%, #FCE7F3 60%, #E0E7FF 80%, #DBEAFE 100%);
-  background-size: 300% 300%;
-  animation: section-glow 20s ease infinite;
-  animation-delay: -14s;
+  background: linear-gradient(180deg, #DBEAFE 0%, #D4DAFF 40%, #DDD0F5 100%);
   overflow: hidden;
 }
 
@@ -1507,6 +1501,7 @@ body{background:#F0F4FF}
 
 /* Bottom meadow wave */
 ._e5551 {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2986,12 +2981,19 @@ window.addEventListener('resize', function() {
   fxCSS.textContent='@keyframes bg-sweep{0%{transform:translate(0,0) scale(1)}25%{transform:translate(20%,-15%) scale(1.1)}50%{transform:translate(-15%,20%) scale(.95)}75%{transform:translate(15%,10%) scale(1.05)}100%{transform:translate(0,0) scale(1)}}@keyframes glow-pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.15)}}';
   document.head.appendChild(fxCSS);
 
+  // --- Subtle dot grid texture on all sections ---
+  document.querySelectorAll('._1e547,._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
+    var dots=document.createElement('div');
+    dots.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(circle,rgba(99,102,241,.06) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;z-index:1';
+    sec.appendChild(dots);
+  });
+
   // --- Animated gradient mesh blobs in non-hero sections ---
   var blobGrads=[
-    'radial-gradient(circle,rgba(236,72,153,.4) 0%,rgba(236,72,153,.15) 35%,transparent 65%)',
-    'radial-gradient(circle,rgba(6,182,212,.35) 0%,rgba(6,182,212,.12) 35%,transparent 65%)',
-    'radial-gradient(circle,rgba(245,158,11,.3) 0%,rgba(245,158,11,.1) 35%,transparent 65%)',
-    'radial-gradient(circle,rgba(124,58,237,.35) 0%,rgba(124,58,237,.12) 35%,transparent 65%)'
+    'radial-gradient(circle,rgba(236,72,153,.25) 0%,rgba(236,72,153,.08) 40%,transparent 65%)',
+    'radial-gradient(circle,rgba(6,182,212,.22) 0%,rgba(6,182,212,.07) 40%,transparent 65%)',
+    'radial-gradient(circle,rgba(245,158,11,.2) 0%,rgba(245,158,11,.06) 40%,transparent 65%)',
+    'radial-gradient(circle,rgba(124,58,237,.22) 0%,rgba(124,58,237,.07) 40%,transparent 65%)'
   ];
   var bCount=isTouch?2:5;
   document.querySelectorAll('._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
@@ -3021,7 +3023,7 @@ window.addEventListener('resize', function() {
   });
 
   // --- Pulsing glow orbs ---
-  var glowColors=['rgba(236,72,153,.3)','rgba(6,182,212,.25)','rgba(245,158,11,.22)'];
+  var glowColors=['rgba(236,72,153,.2)','rgba(6,182,212,.16)','rgba(245,158,11,.14)'];
   var gCount=isTouch?1:2;
   document.querySelectorAll('._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
     for(var k=0;k<gCount;k++){
