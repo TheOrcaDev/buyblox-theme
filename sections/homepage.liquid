@@ -14,29 +14,35 @@
 <style>
 /* ===== UNIFIED BACKGROUND ===== */
 html{overflow-x:hidden}
-body{
+/* Force Shopify wrappers transparent so body bg shows through */
+body,#MainContent,#MainContent>*,.shopify-section,main{background:transparent!important}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
   background:
-    /* — plus/cross pattern — */
-    linear-gradient(90deg, rgba(37,99,235,.045) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(37,99,235,.045) 1px, transparent 1px),
-    /* — diagonal accent lines — */
-    repeating-linear-gradient(
-      135deg,
-      transparent,
-      transparent 60px,
-      rgba(99,102,241,.025) 60px,
-      rgba(99,102,241,.025) 61px
-    ),
-    /* — flowing gradient base — */
+    /* — cross grid — */
+    linear-gradient(90deg, rgba(37,99,235,.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(37,99,235,.07) 1px, transparent 1px),
+    /* — diagonal accent — */
+    repeating-linear-gradient(135deg,transparent,transparent 50px,rgba(99,102,241,.04) 50px,rgba(99,102,241,.04) 51px),
+    /* — big soft radial glow spots — */
+    radial-gradient(ellipse 600px 600px at 20% 30%, rgba(99,102,241,.08), transparent),
+    radial-gradient(ellipse 500px 500px at 80% 60%, rgba(236,72,153,.06), transparent),
+    radial-gradient(ellipse 700px 500px at 50% 80%, rgba(6,182,212,.07), transparent),
+    /* — base gradient — */
     linear-gradient(135deg,#DBEAFE 0%,#E0E7FF 15%,#EDE9FE 30%,#DBEAFE 45%,#CFFAFE 60%,#E0E7FF 75%,#F3E8FF 90%,#DBEAFE 100%);
   background-size:
     24px 24px,
     24px 24px,
     auto,
+    auto,auto,auto,
     400% 400%;
   animation:bg-flow 25s ease infinite;
 }
-@keyframes bg-flow{0%{background-position:0 0,0 0,0 0,0% 50%}25%{background-position:0 0,0 0,0 0,50% 0%}50%{background-position:0 0,0 0,0 0,100% 50%}75%{background-position:0 0,0 0,0 0,50% 100%}100%{background-position:0 0,0 0,0 0,0% 50%}}
+@keyframes bg-flow{0%{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0% 50%}50%{background-position:0 0,0 0,0 0,0 0,0 0,0 0,100% 50%}100%{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0% 50%}}
 /* ========== SECTION: HERO ========== */
 ._1e547 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
 ._1e547{position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:transparent;overflow:hidden}
