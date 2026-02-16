@@ -31,7 +31,7 @@ html.bbx-home body::before{
 }
 /* ===== ORGANIC BLOB SHAPES ===== */
 ._bbx-blobs{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-._bbx-blob{position:absolute;filter:blur(44px);opacity:0;animation:blob-in .8s ease forwards}
+._bbx-blob{display:block!important;position:absolute;filter:blur(44px);opacity:0;animation:blob-in .8s ease forwards}
 ._bbx-blob:nth-child(1){width:600px;height:600px;top:-5%;left:-8%;background:rgba(37,99,235,.35);border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite,blob-in .8s ease forwards}
 ._bbx-blob:nth-child(2){width:500px;height:500px;top:-3%;right:-8%;background:rgba(124,58,237,.28);border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite,blob-in .8s ease .15s forwards}
 ._bbx-blob:nth-child(3){width:550px;height:450px;bottom:8%;left:-3%;background:rgba(6,182,212,.30);border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite,blob-in .8s ease .3s forwards}
