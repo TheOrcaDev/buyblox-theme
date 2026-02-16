@@ -10,13 +10,12 @@ html.bbx-home body::before{
   z-index:-1;
   pointer-events:none;
   background:
-    /* — dot matrix — */
-    radial-gradient(circle 1px at center, rgba(37,99,235,.12) 0%, transparent 100%),
-    /* — offset dot matrix (denser feel) — */
-    radial-gradient(circle .6px at center, rgba(99,102,241,.08) 0%, transparent 100%),
-    /* — diamond accent lines — */
-    repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(99,102,241,.035) 40px,rgba(99,102,241,.035) 41px),
-    repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(99,102,241,.035) 40px,rgba(99,102,241,.035) 41px),
+    /* — hex dot grid (offset rows) — */
+    radial-gradient(circle, rgba(37,99,235,.14) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(37,99,235,.14) 1.2px, transparent 1.2px),
+    /* — diamond crosshatch — */
+    repeating-linear-gradient(45deg,transparent,transparent 38px,rgba(99,102,241,.06) 38px,rgba(99,102,241,.06) 39px),
+    repeating-linear-gradient(-45deg,transparent,transparent 38px,rgba(99,102,241,.06) 38px,rgba(99,102,241,.06) 39px),
     /* — soft glow spots — */
     radial-gradient(ellipse 600px 600px at 20% 30%, rgba(99,102,241,.1), transparent),
     radial-gradient(ellipse 500px 500px at 80% 60%, rgba(236,72,153,.07), transparent),
@@ -24,14 +23,14 @@ html.bbx-home body::before{
     /* — base gradient — */
     linear-gradient(135deg,#DBEAFE 0%,#E0E7FF 15%,#EDE9FE 30%,#DBEAFE 45%,#CFFAFE 60%,#E0E7FF 75%,#F3E8FF 90%,#DBEAFE 100%);
   background-size:
-    28px 28px,
-    28px 28px,
+    24px 42px,
+    24px 42px,
     auto,auto,
     auto,auto,auto,
     auto;
   background-position:
     0 0,
-    14px 14px,
+    12px 21px,
     0 0,0 0,
     0 0,0 0,0 0,
     0 0;
@@ -43,10 +42,10 @@ html.bbx-home body::after{
   inset:0;
   z-index:-1;
   pointer-events:none;
-  opacity:.35;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");
+  opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
   background-repeat:repeat;
-  background-size:180px 180px;
+  background-size:200px 200px;
 }
 /* ========== SECTION: HERO ========== */
 ._1e547 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
