@@ -1,9 +1,9 @@
 <style>
 /* ===== UNIFIED BACKGROUND ===== */
 html{overflow-x:hidden}
-/* Force Shopify wrappers transparent so body bg shows through */
-body,#MainContent,#MainContent>*,.shopify-section,main{background:transparent!important}
-body::before{
+/* Scoped transparent wrappers — only when homepage section is present */
+html.bbx-home body,html.bbx-home #MainContent,html.bbx-home #MainContent>*,html.bbx-home .shopify-section,html.bbx-home main{background:transparent!important}
+html.bbx-home body::before{
   content:'';
   position:fixed;
   inset:0;
@@ -26,10 +26,8 @@ body::before{
     24px 24px,
     auto,
     auto,auto,auto,
-    400% 400%;
-  animation:bg-flow 25s ease infinite;
+    auto;
 }
-@keyframes bg-flow{0%{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0% 50%}50%{background-position:0 0,0 0,0 0,0 0,0 0,0 0,100% 50%}100%{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0% 50%}}
 /* ========== SECTION: HERO ========== */
 ._1e547 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
 ._1e547{position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:transparent;overflow:hidden}
@@ -1596,6 +1594,7 @@ body::before{
 [data-particle]{position:fixed;border-radius:50%;pointer-events:none;z-index:0;animation:particle-drift linear infinite;will-change:transform}
 @keyframes particle-drift{0%{transform:translateY(0) translateX(0);opacity:0}5%{opacity:var(--p-opacity,.5)}50%{transform:translateY(calc(var(--p-dist,-50vh))) translateX(var(--p-drift,20px))}95%{opacity:var(--p-opacity,.3)}100%{transform:translateY(calc(var(--p-dist,-50vh) * 2)) translateX(calc(var(--p-drift,20px) * -1));opacity:0}}
 </style>
+<script>document.documentElement.classList.add('bbx-home')</script>
 
 <!-- ========== SECTION: HERO ========== -->
 <section class="_1e547">
@@ -2970,18 +2969,6 @@ window.addEventListener('resize', function() {
     document.body.appendChild(orb);
   }
 
-  // --- Inject animated keyframes ---
-  var fxCSS=document.createElement('style');
-  fxCSS.textContent='@keyframes bg-sweep{0%{transform:translate(0,0) scale(1)}25%{transform:translate(20%,-15%) scale(1.1)}50%{transform:translate(-15%,20%) scale(.95)}75%{transform:translate(15%,10%) scale(1.05)}100%{transform:translate(0,0) scale(1)}}@keyframes glow-pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.15)}}';
-  document.head.appendChild(fxCSS);
-
-  // --- Subtle dot grid texture on all sections ---
-  document.querySelectorAll('._1e547,._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
-    var dots=document.createElement('div');
-    dots.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(circle,rgba(99,102,241,.06) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;z-index:1';
-    sec.appendChild(dots);
-  });
-
   // --- Animated gradient mesh blobs in non-hero sections ---
   var blobGrads=[
     'radial-gradient(circle,rgba(236,72,153,.25) 0%,rgba(236,72,153,.08) 40%,transparent 65%)',
@@ -3001,35 +2988,6 @@ window.addEventListener('resize', function() {
         'animation:mesh-float '+(16+Math.random()*16)+'s ease-in-out infinite;'+
         'animation-delay:'+(-Math.random()*20)+'s;';
       sec.appendChild(b);
-    }
-  });
-
-  // --- Sweeping light source per section ---
-  document.querySelectorAll('._1e547,._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
-    var sw=document.createElement('div');
-    sw.style.cssText='position:absolute;top:-40%;left:-40%;width:180%;height:180%;'+
-      'background:radial-gradient(ellipse at 50% 50%,rgba(124,58,237,.12) 0%,rgba(236,72,153,.04) 30%,transparent 55%);'+
-      'animation:bg-sweep '+(14+Math.random()*12)+'s ease-in-out infinite;'+
-      'animation-delay:'+(-Math.random()*15)+'s;'+
-      'pointer-events:none;z-index:1';
-    sec.appendChild(sw);
-  });
-
-  // --- Pulsing glow orbs ---
-  var glowColors=['rgba(236,72,153,.2)','rgba(6,182,212,.16)','rgba(245,158,11,.14)'];
-  var gCount=1;
-  document.querySelectorAll('._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
-    for(var k=0;k<gCount;k++){
-      var g=document.createElement('div');
-      var gsz=150+Math.random()*200;
-      g.style.cssText='position:absolute;border-radius:50%;pointer-events:none;z-index:1;'+
-        'width:'+gsz+'px;height:'+gsz+'px;'+
-        'background:radial-gradient(circle,'+glowColors[k%3]+' 0%,transparent 70%);'+
-        'box-shadow:0 0 '+(gsz*1.2)+'px '+glowColors[k%3]+';'+
-        'top:'+(10+Math.random()*70)+'%;left:'+(10+Math.random()*70)+'%;'+
-        'animation:glow-pulse '+(3+Math.random()*4)+'s ease-in-out infinite;'+
-        'animation-delay:'+(-Math.random()*5)+'s;';
-      sec.appendChild(g);
     }
   });
 
