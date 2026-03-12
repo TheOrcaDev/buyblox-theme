@@ -20,10 +20,10 @@ html.bbx-home body::before{
 }
 /* ===== ORGANIC BLOB SHAPES ===== */
 ._bbx-blobs{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-._bbx-blob{display:block!important;position:absolute;filter:blur(20px);transition:opacity .6s ease;will-change:transform;contain:layout style}
-._bbx-blob:nth-child(1){width:600px;height:600px;top:15%;left:-8%;background:rgba(244,114,182,.25);opacity:.75;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
-._bbx-blob:nth-child(2){width:500px;height:500px;top:18%;right:-8%;background:rgba(253,164,175,.22);opacity:.7;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
-._bbx-blob:nth-child(3){width:550px;height:450px;bottom:8%;left:-3%;background:rgba(252,165,165,.22);opacity:.7;border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite}
+._bbx-blob{display:block!important;position:absolute;filter:blur(40px);transition:opacity .6s ease;will-change:transform;contain:layout style}
+._bbx-blob:nth-child(1){width:500px;height:500px;top:18%;left:-10%;background:rgba(244,114,182,.15);opacity:.6;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
+._bbx-blob:nth-child(2){width:400px;height:400px;top:20%;right:-10%;background:rgba(253,164,175,.12);opacity:.5;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
+._bbx-blob:nth-child(3){width:450px;height:380px;bottom:10%;left:-5%;background:rgba(252,165,165,.12);opacity:.5;border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite}
 ._bbx-blob:nth-child(4){display:none}
 ._bbx-blob:nth-child(5){display:none}
 @keyframes blob-morph-1{0%,100%{border-radius:30% 70% 70% 30% / 30% 30% 70% 70%}25%{border-radius:58% 42% 55% 45% / 56% 45% 55% 44%}50%{border-radius:50% 50% 33% 67% / 55% 27% 73% 45%}75%{border-radius:33% 67% 58% 42% / 63% 68% 32% 37%}}
@@ -98,10 +98,19 @@ html.bbx-home body::after{
 
 /* ===== BACKGROUND SPRING ELEMENTS ===== */
 ._a1df0{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:hidden}
-
-
-
-
+/* Sakura branch decorations — like clouds in reference but cherry blossoms */
+._sk-branch{position:absolute;pointer-events:none;opacity:.6}
+._sk-branch svg{width:100%;height:100%;filter:drop-shadow(0 4px 12px rgba(219,39,119,.15))}
+._sk-branch:nth-child(1){width:180px;height:120px;top:5%;left:3%;animation:sk-drift-1 18s ease-in-out infinite}
+._sk-branch:nth-child(2){width:140px;height:100px;top:12%;right:5%;opacity:.5;animation:sk-drift-2 22s ease-in-out infinite}
+._sk-branch:nth-child(3){width:200px;height:130px;bottom:30%;left:-2%;opacity:.45;animation:sk-drift-1 25s ease-in-out infinite;animation-delay:-8s}
+._sk-branch:nth-child(4){width:160px;height:110px;bottom:20%;right:2%;opacity:.4;animation:sk-drift-2 20s ease-in-out infinite;animation-delay:-5s}
+._sk-branch:nth-child(5){width:120px;height:90px;top:40%;left:8%;opacity:.35;animation:sk-drift-1 24s ease-in-out infinite;animation-delay:-12s}
+._sk-branch:nth-child(6){width:100px;height:80px;top:55%;right:10%;opacity:.3;animation:sk-drift-2 21s ease-in-out infinite;animation-delay:-3s}
+@keyframes sk-drift-1{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(3deg)}}
+@keyframes sk-drift-2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(12px) rotate(-3deg)}}
+@media(max-width:768px){._sk-branch{opacity:.3}._sk-branch:nth-child(n+4){display:none}._sk-branch:nth-child(1){width:120px}._sk-branch:nth-child(2){width:100px}._sk-branch:nth-child(3){width:130px}}
+@media(max-width:480px){._sk-branch:nth-child(n+3){display:none}._sk-branch:nth-child(1){width:90px}._sk-branch:nth-child(2){width:80px}}
 
 /* ===== BOTTOM FADE ===== */
 ._0ac44{display:none}
@@ -136,10 +145,11 @@ html.bbx-home body::after{
 ._b6770{display:flex;gap:20px;animation:scroll 45s linear infinite;will-change:transform;flex-wrap:nowrap}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-100% / 3))}}
 ._b6770:hover{animation-play-state:paused}
-._fda51{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px 14px;background:#FFF;border:3px solid #E5E7EB;border-radius:16px;min-width:110px;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 12px rgba(0,0,0,.05);margin-bottom:0;position:relative;overflow:visible;transform:rotate(-2deg)}
-._fda51:nth-child(even){transform:rotate(2deg)}
-._fda51:nth-child(3n){transform:rotate(-3deg)}
-._fda51:hover{background:linear-gradient(135deg,#FAFAFA 0%,#E5E7EB 100%);transform:translateY(-8px) scale(1.05) rotate(0deg);border-color:#F9A8D4;box-shadow:0 12px 28px rgba(219,39,119,.15)}
+._fda51{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px 14px;background:#FFF;border:3px solid #E5E7EB;border-radius:16px;min-width:110px;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 12px rgba(0,0,0,.05);margin-bottom:0;position:relative;overflow:visible;rotate:-2deg}
+._fda51:nth-child(even){rotate:2.5deg}
+._fda51:nth-child(3n){rotate:-3deg}
+._fda51:nth-child(5n){rotate:1.5deg}
+._fda51:hover{background:linear-gradient(135deg,#FAFAFA 0%,#E5E7EB 100%);translate:0 -8px;scale:1.05;rotate:0deg;border-color:#F9A8D4;box-shadow:0 12px 28px rgba(219,39,119,.15)}
 ._25e72{position:relative;width:64px;height:64px}
 ._51fe9{position:absolute;top:-12px;left:-14px;width:40px;height:auto;z-index:10;pointer-events:none}
 ._51fe9 img{width:100%;height:auto;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
@@ -1631,6 +1641,15 @@ html.bbx-home body::after{
 
   <div class="_0ac44"></div>
 
+  <!-- Sakura spring decorations -->
+  <div class="_a1df0">
+    <div class="_sk-branch"><svg viewBox="0 0 180 120" fill="none"><circle cx="40" cy="50" r="28" fill="rgba(244,114,182,.25)"/><circle cx="70" cy="35" r="22" fill="rgba(251,113,133,.2)"/><circle cx="55" cy="70" r="18" fill="rgba(253,164,175,.22)"/><circle cx="90" cy="55" r="15" fill="rgba(244,114,182,.18)"/><circle cx="30" cy="30" r="12" fill="rgba(251,113,133,.15)"/></svg></div>
+    <div class="_sk-branch"><svg viewBox="0 0 140 100" fill="none"><circle cx="70" cy="45" r="30" fill="rgba(253,164,175,.22)"/><circle cx="40" cy="35" r="20" fill="rgba(244,114,182,.2)"/><circle cx="95" cy="55" r="18" fill="rgba(251,113,133,.18)"/><circle cx="55" cy="65" r="14" fill="rgba(244,114,182,.15)"/></svg></div>
+    <div class="_sk-branch"><svg viewBox="0 0 200 130" fill="none"><circle cx="60" cy="60" r="35" fill="rgba(244,114,182,.2)"/><circle cx="100" cy="45" r="25" fill="rgba(253,164,175,.18)"/><circle cx="80" cy="85" r="20" fill="rgba(251,113,133,.16)"/><circle cx="130" cy="70" r="16" fill="rgba(244,114,182,.14)"/></svg></div>
+    <div class="_sk-branch"><svg viewBox="0 0 160 110" fill="none"><circle cx="80" cy="50" r="30" fill="rgba(251,113,133,.2)"/><circle cx="50" cy="40" r="22" fill="rgba(244,114,182,.18)"/><circle cx="110" cy="65" r="18" fill="rgba(253,164,175,.16)"/></svg></div>
+    <div class="_sk-branch"><svg viewBox="0 0 120 90" fill="none"><circle cx="55" cy="40" r="24" fill="rgba(244,114,182,.18)"/><circle cx="80" cy="55" r="18" fill="rgba(253,164,175,.15)"/><circle cx="35" cy="60" r="14" fill="rgba(251,113,133,.12)"/></svg></div>
+    <div class="_sk-branch"><svg viewBox="0 0 100 80" fill="none"><circle cx="50" cy="40" r="22" fill="rgba(253,164,175,.16)"/><circle cx="30" cy="30" r="16" fill="rgba(244,114,182,.14)"/><circle cx="70" cy="50" r="12" fill="rgba(251,113,133,.12)"/></svg></div>
+  </div>
 
   <div class="_d389b">
     <div class="_a5a29">
