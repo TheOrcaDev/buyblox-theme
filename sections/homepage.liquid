@@ -1,14 +1,8 @@
 <style>
 /* ===== UNIFIED BACKGROUND ===== */
 html{overflow-x:hidden}
-/* Scoped transparent wrappers — only when homepage section is present */
-html.bbx-home body,html.bbx-home #MainContent,html.bbx-home #MainContent>*,html.bbx-home .shopify-section,html.bbx-home main{background:transparent!important}
-/* Force header transparent by overriding Shopify's --color-background variable + direct backgrounds */
-html.bbx-home [id*="__header"]{--color-background:0 0 0 / 0!important}
-html.bbx-home .header-wrapper,html.bbx-home .section-header,html.bbx-home header.header,html.bbx-home .shopify-section-header,html.bbx-home #shopify-section-header,html.bbx-home .header__wrapper,html.bbx-home [id*="__header"],html.bbx-home [id*="__header"]>*,html.bbx-home .header-section,html.bbx-home .header-section .header,html.bbx-home sticky-header{background:transparent!important;background-color:transparent!important;border-bottom:none!important;box-shadow:none!important}
-html.bbx-home .header-wrapper *:not(img):not(svg):not(svg *):not(button):not(a):not(span),html.bbx-home sticky-header *:not(img):not(svg):not(svg *):not(button):not(a):not(span):not(.menu__item){background:transparent!important;background-color:transparent!important}
-html.bbx-home .header-section .header::before,html.bbx-home .header-wrapper::before,html.bbx-home header.header::before,html.bbx-home sticky-header::before,html.bbx-home [id*="__header"]::before{background:transparent!important;display:none!important}
-html.bbx-home [id*="__announcement"],html.bbx-home [id*="__announcement"]>*{background:transparent!important;background-color:transparent!important}
+/* Scoped transparent wrappers — non-header elements only */
+html.bbx-home #MainContent,html.bbx-home #MainContent>*,html.bbx-home .shopify-section:not(.shopify-section-header),html.bbx-home main{background:transparent!important}
 html.bbx-home body::before{
   content:'';
   position:fixed;
@@ -16,19 +10,19 @@ html.bbx-home body::before{
   z-index:-1;
   pointer-events:none;
   background:
-    /* — subtle crosshatch — */
+    /* — subtle crosshatch (fades in after top 15%) — */
     repeating-linear-gradient(45deg,transparent,transparent 42px,rgba(236,72,153,.035) 42px,rgba(236,72,153,.035) 43px),
     repeating-linear-gradient(-45deg,transparent,transparent 42px,rgba(236,72,153,.035) 42px,rgba(236,72,153,.035) 43px),
-    /* — soft sakura gradient — */
-    linear-gradient(160deg,#FFF5F7 0%,#FFF0F3 12%,#FFF5F7 28%,#FFEEF2 42%,#FFF5F7 58%,#FFF0F5 72%,#FFF8FA 88%,#FFF5F7 100%);
+    /* — white at top, fading into sakura gradient — */
+    linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 8%,#FFF8FA 15%,#FFF5F7 22%,#FFF0F3 35%,#FFEEF2 50%,#FFF0F5 70%,#FFF5F7 100%);
   background-size:auto,auto,auto;
   background-position:0 0,0 0,0 0;
 }
 /* ===== ORGANIC BLOB SHAPES ===== */
 ._bbx-blobs{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
 ._bbx-blob{display:block!important;position:absolute;filter:blur(20px);transition:opacity .6s ease;will-change:transform;contain:layout style}
-._bbx-blob:nth-child(1){width:600px;height:600px;top:-5%;left:-8%;background:rgba(244,114,182,.25);opacity:.75;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
-._bbx-blob:nth-child(2){width:500px;height:500px;top:-3%;right:-8%;background:rgba(253,164,175,.22);opacity:.7;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
+._bbx-blob:nth-child(1){width:600px;height:600px;top:15%;left:-8%;background:rgba(244,114,182,.25);opacity:.75;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
+._bbx-blob:nth-child(2){width:500px;height:500px;top:18%;right:-8%;background:rgba(253,164,175,.22);opacity:.7;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
 ._bbx-blob:nth-child(3){width:550px;height:450px;bottom:8%;left:-3%;background:rgba(252,165,165,.22);opacity:.7;border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite}
 ._bbx-blob:nth-child(4){display:none}
 ._bbx-blob:nth-child(5){display:none}
@@ -78,7 +72,7 @@ html.bbx-home body::after{
 ._8bf10{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
 
 ._70520{position:absolute;border-radius:50%;filter:blur(50px);animation:mesh-float ease-in-out infinite;will-change:transform}
-._70520:nth-child(1){width:1100px;height:1100px;top:-20%;left:-15%;background:rgba(244,114,182,.35);opacity:.9;animation-duration:20s}
+._70520:nth-child(1){width:1100px;height:1100px;top:5%;left:-15%;background:rgba(244,114,182,.35);opacity:.9;animation-duration:20s}
 ._70520:nth-child(2){width:1000px;height:1000px;top:10%;right:-15%;background:rgba(251,113,133,.3);opacity:.85;animation-duration:28s;animation-delay:-7s}
 ._70520:nth-child(3){width:1200px;height:1200px;bottom:-25%;left:5%;background:rgba(253,164,175,.3);opacity:.8;animation-duration:32s;animation-delay:-14s}
 ._70520:nth-child(4){width:700px;height:700px;top:45%;left:40%;background:rgba(252,165,165,.28);opacity:.75;animation-duration:24s;animation-delay:-4s}
@@ -122,7 +116,7 @@ html.bbx-home body::after{
 ._10727{font:900 clamp(36px,6vw,64px)/1.2 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 36px;letter-spacing:-.02em;color:#111;max-width:1100px;margin-left:auto;margin-right:auto}
 ._10727 .accent{display:inline-block}
 50%{background-position:100% 0%}}
-._a0bd9{max-width:820px;margin:0 auto 40px;font:400 clamp(16px,1.6vw,18px)/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B}
+._a0bd9{max-width:820px;margin:0 auto 56px;font:400 clamp(16px,1.6vw,18px)/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B}
 ._a0bd9 strong{color:#111;font-weight:700}
 @media (max-width:768px){._a0bd9{display:none}}
 ._79a7b{position:relative;display:inline-block;margin-bottom:24px}
