@@ -3,6 +3,8 @@
 html{overflow-x:hidden}
 /* Scoped transparent wrappers — only when homepage section is present */
 html.bbx-home body,html.bbx-home #MainContent,html.bbx-home #MainContent>*,html.bbx-home .shopify-section,html.bbx-home main{background:transparent!important}
+html.bbx-home #shopify-section-header,html.bbx-home #shopify-section-header *:not(img):not(svg):not(svg *):not(button):not(a){background:transparent!important;background-color:transparent!important}
+html.bbx-home .header-wrapper,html.bbx-home .header,html.bbx-home header,html.bbx-home .announcement-bar,html.bbx-home .section-header{background:transparent!important;background-color:transparent!important;border-bottom:none!important;box-shadow:none!important}
 html.bbx-home body::before{
   content:'';
   position:fixed;
@@ -50,7 +52,7 @@ html.bbx-home body::before{
   ._bbx-blob:nth-child(5){width:250px;height:250px}
 }
 @media (max-width:768px){
-  ._bbx-blob{filter:blur(35px)}
+  ._bbx-blob{filter:blur(16px)}
   ._bbx-blob:nth-child(1){width:300px;height:300px;top:-3%;left:-5%}
   ._bbx-blob:nth-child(2){width:260px;height:260px;top:-2%;right:-5%}
   ._bbx-blob:nth-child(3){width:280px;height:240px;bottom:5%;left:-2%}
@@ -58,7 +60,7 @@ html.bbx-home body::before{
   ._bbx-blob:nth-child(5){display:none!important}
 }
 @media (max-width:480px){
-  ._bbx-blob{filter:blur(28px)}
+  ._bbx-blob{filter:blur(12px)}
   ._bbx-blob:nth-child(1){width:220px;height:220px}
   ._bbx-blob:nth-child(2){width:190px;height:190px}
   ._bbx-blob:nth-child(3){width:200px;height:180px}
@@ -466,7 +468,7 @@ html.bbx-home body::after{
 ._5ae98{padding:20px;text-align:center;display:flex;flex-direction:column;flex:1}
 ._0de19{font-size:clamp(18px,2vw,22px);font-weight:900;color:#111;margin:0 0 10px}
 ._1db54{font-size:14px;font-weight:600;color:#64748B;margin:0 0 16px}
-._d310a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px 20px;background:linear-gradient(135deg,#DB2777 0%,#EC4899 100%);color:#FFF;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;border-radius:12px;border:none;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(219,39,119,.3);text-decoration:none!important;position:relative;overflow:hidden}
+._d310a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px 20px;background:linear-gradient(135deg,#DB2777 0%,#EC4899 100%);color:#FFF;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;border-radius:12px;border:none;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(219,39,119,.3);text-decoration:none!important;position:relative;overflow:hidden;white-space:nowrap}
 ._d310a::before{content:'';position:absolute;top:0;left:-150%;width:200%;height:100%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.2) 45%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.2) 55%,transparent 60%);pointer-events:none;transition:left .5s cubic-bezier(.16,1,.3,1)}._d310a:hover::before{left:150%}
 ._d310a:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(219,39,119,.5);background:linear-gradient(135deg,#EC4899,#DB2777)}
 ._d310a svg{width:18px;height:18px;fill:currentColor;position:relative;z-index:1}
@@ -995,7 +997,7 @@ html.bbx-home body::after{
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: linear-gradient(135deg, #DB2777 0%, #059669 100%);
+  background: linear-gradient(135deg, #DB2777 0%, #9D174D 100%);
   color: #FFFFFF;
   padding: 5px 12px;
   border-radius: 8px;
@@ -1003,7 +1005,7 @@ html.bbx-home body::after{
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 8px rgba(219, 39, 119, 0.3);
 }
 
 ._e30bb svg {
@@ -2783,7 +2785,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
         const rect = card.getBoundingClientRect();
         const x = (rect.left + rect.width / 2) / window.innerWidth;
         const y = (rect.top + rect.height / 2) / window.innerHeight;
-        const colors = ['#DB2777', '#EC4899', '#F59E0B', '#10B981', '#8B5CF6', '#06B6D4'];
+        const colors = ['#DB2777', '#EC4899', '#F9A8D4', '#FF6D00', '#FBBF24', '#FFF'];
 
         lazyConfetti({
           particleCount: 55,
@@ -2828,7 +2830,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
             particleCount: 35,
             spread: 360,
             origin: { x: x, y: y },
-            colors: ['#DB2777', '#EC4899', '#FBBF24', '#10B981', '#FFF'],
+            colors: ['#DB2777', '#EC4899', '#F9A8D4', '#FBBF24', '#FFF'],
             startVelocity: 25,
             gravity: 0.8,
             scalar: 0.9,
@@ -2842,7 +2844,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
       }
 
       btn.innerHTML='<svg class="cart-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span>Added!</span>';
-      btn.style.background='linear-gradient(135deg,#FF6D00,#059669)';
+      btn.style.background='linear-gradient(135deg,#FF6D00,#DB2777)';
       document.dispatchEvent(new CustomEvent('cart:refresh'));
       setTimeout(()=>{btn.innerHTML=originalHTML;btn.style.background='';btn.disabled=false},2000);
     }catch(error){
