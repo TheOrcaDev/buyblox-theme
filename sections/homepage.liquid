@@ -11,13 +11,13 @@ html.bbx-home body::before{
   pointer-events:none;
   background:
     /* — hex dot grid (offset rows) — */
-    radial-gradient(circle, rgba(37,99,235,.14) 1.2px, transparent 1.2px),
-    radial-gradient(circle, rgba(37,99,235,.14) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(219,39,119,.14) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(219,39,119,.14) 1.2px, transparent 1.2px),
     /* — diamond crosshatch — */
-    repeating-linear-gradient(45deg,transparent,transparent 38px,rgba(99,102,241,.06) 38px,rgba(99,102,241,.06) 39px),
-    repeating-linear-gradient(-45deg,transparent,transparent 38px,rgba(99,102,241,.06) 38px,rgba(99,102,241,.06) 39px),
+    repeating-linear-gradient(45deg,transparent,transparent 38px,rgba(244,114,182,.06) 38px,rgba(244,114,182,.06) 39px),
+    repeating-linear-gradient(-45deg,transparent,transparent 38px,rgba(244,114,182,.06) 38px,rgba(244,114,182,.06) 39px),
     /* — base gradient — */
-    linear-gradient(135deg,#DBEAFE 0%,#E0E7FF 15%,#EDE9FE 30%,#DBEAFE 45%,#CFFAFE 60%,#E0E7FF 75%,#F3E8FF 90%,#DBEAFE 100%);
+    linear-gradient(135deg,#FCE7F3 0%,#FDF2F8 15%,#FFF1F2 30%,#FCE7F3 45%,#FFE4E6 60%,#FDF2F8 75%,#FFF0F6 90%,#FCE7F3 100%);
   background-size:
     24px 42px,
     24px 42px,
@@ -31,12 +31,12 @@ html.bbx-home body::before{
 }
 /* ===== ORGANIC BLOB SHAPES ===== */
 ._bbx-blobs{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-._bbx-blob{display:block!important;position:absolute;filter:blur(44px);transition:opacity .6s ease}
-._bbx-blob:nth-child(1){width:600px;height:600px;top:-5%;left:-8%;background:rgba(37,99,235,.35);opacity:.85;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
-._bbx-blob:nth-child(2){width:500px;height:500px;top:-3%;right:-8%;background:rgba(124,58,237,.28);opacity:.8;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
-._bbx-blob:nth-child(3){width:550px;height:450px;bottom:8%;left:-3%;background:rgba(6,182,212,.30);opacity:.8;border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite}
-._bbx-blob:nth-child(4){width:400px;height:400px;top:40%;right:0%;background:rgba(236,72,153,.22);opacity:.75;border-radius:70% 30% 50% 50% / 30% 50% 50% 70%;animation:blob-morph-4 22s ease-in-out infinite}
-._bbx-blob:nth-child(5){width:320px;height:320px;bottom:-2%;right:22%;background:rgba(245,158,11,.20);opacity:.7;border-radius:50% 50% 30% 70% / 60% 40% 60% 40%;animation:blob-morph-5 26s ease-in-out infinite}
+._bbx-blob{display:block!important;position:absolute;filter:blur(20px);transition:opacity .6s ease;will-change:transform;contain:layout style}
+._bbx-blob:nth-child(1){width:600px;height:600px;top:-5%;left:-8%;background:rgba(219,39,119,.35);opacity:.85;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
+._bbx-blob:nth-child(2){width:500px;height:500px;top:-3%;right:-8%;background:rgba(244,114,182,.28);opacity:.8;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
+._bbx-blob:nth-child(3){width:550px;height:450px;bottom:8%;left:-3%;background:rgba(253,164,175,.30);opacity:.8;border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite}
+._bbx-blob:nth-child(4){width:400px;height:400px;top:40%;right:0%;background:rgba(251,113,133,.25);opacity:.75;border-radius:70% 30% 50% 50% / 30% 50% 50% 70%;animation:blob-morph-4 22s ease-in-out infinite}
+._bbx-blob:nth-child(5){width:320px;height:320px;bottom:-2%;right:22%;background:rgba(190,24,93,.18);opacity:.7;border-radius:50% 50% 30% 70% / 60% 40% 60% 40%;animation:blob-morph-5 26s ease-in-out infinite}
 @keyframes blob-morph-1{0%,100%{border-radius:30% 70% 70% 30% / 30% 30% 70% 70%}25%{border-radius:58% 42% 55% 45% / 56% 45% 55% 44%}50%{border-radius:50% 50% 33% 67% / 55% 27% 73% 45%}75%{border-radius:33% 67% 58% 42% / 63% 68% 32% 37%}}
 @keyframes blob-morph-2{0%,100%{border-radius:60% 40% 30% 70% / 60% 30% 70% 40%}25%{border-radius:40% 60% 55% 45% / 35% 55% 45% 65%}50%{border-radius:55% 45% 65% 35% / 50% 60% 40% 50%}75%{border-radius:35% 65% 40% 60% / 65% 40% 60% 35%}}
 @keyframes blob-morph-3{0%,100%{border-radius:40% 60% 70% 30% / 50% 60% 40% 50%}25%{border-radius:65% 35% 45% 55% / 40% 50% 50% 60%}50%{border-radius:35% 65% 55% 45% / 60% 35% 65% 40%}75%{border-radius:55% 45% 35% 65% / 45% 65% 35% 55%}}
@@ -85,7 +85,7 @@ html.bbx-home body::after{
 ._8bf10{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
 
 ._70520{position:absolute;border-radius:50%;filter:blur(80px);animation:mesh-float ease-in-out infinite;will-change:transform}
-._70520:nth-child(1){width:1100px;height:1100px;top:-20%;left:-15%;background:rgba(37,99,235,.5);opacity:.95;animation-duration:20s}
+._70520:nth-child(1){width:1100px;height:1100px;top:-20%;left:-15%;background:rgba(219,39,119,.5);opacity:.95;animation-duration:20s}
 ._70520:nth-child(2){width:1000px;height:1000px;top:10%;right:-15%;background:rgba(124,58,237,.45);opacity:.9;animation-duration:28s;animation-delay:-7s}
 ._70520:nth-child(3){width:1200px;height:1200px;bottom:-25%;left:5%;background:rgba(6,182,212,.4);opacity:.85;animation-duration:32s;animation-delay:-14s}
 ._70520:nth-child(4){width:700px;height:700px;top:45%;left:40%;background:rgba(236,72,153,.38);opacity:.8;animation-duration:24s;animation-delay:-4s}
@@ -94,7 +94,7 @@ html.bbx-home body::after{
 
 /* ===== FLOATING PARTICLES / SPARKLES ===== */
 ._af8ad{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:hidden}
-._96b55{position:absolute;width:4px;height:4px;background:radial-gradient(circle,rgba(99,102,241,.6) 0%,rgba(139,92,246,.3) 50%,transparent 100%);border-radius:50%;animation:particle-float linear infinite}
+._96b55{position:absolute;width:4px;height:4px;background:radial-gradient(circle,rgba(244,114,182,.6) 0%,rgba(139,92,246,.3) 50%,transparent 100%);border-radius:50%;animation:particle-float linear infinite}
 ._96b55:nth-child(1){left:10%;top:20%;animation-duration:20s;animation-delay:0s}
 ._96b55:nth-child(2){left:20%;top:60%;animation-duration:25s;animation-delay:-5s;width:3px;height:3px}
 ._96b55:nth-child(3){left:30%;top:40%;animation-duration:22s;animation-delay:-10s}
@@ -127,7 +127,7 @@ html.bbx-home body::after{
 ._9e8f9 svg{width:16px;height:16px;fill:#00B67A}
 ._c7e67{font-size:14px;font-weight:600;color:#64748B}
 ._10727{font:900 clamp(36px,6vw,64px)/1.2 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 36px;letter-spacing:-.02em;color:#111;max-width:1100px;margin-left:auto;margin-right:auto}
-._10727 .accent{display:inline-block;background:linear-gradient(120deg,#1E3A8A 0%,#1E40AF 30%,#2563EB 65%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
+._10727 .accent{display:inline-block;background:linear-gradient(120deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
 @keyframes shimmer{0%,100%{background-position:0% 0%}50%{background-position:100% 0%}}
 ._a0bd9{max-width:820px;margin:0 auto 40px;font:400 clamp(16px,1.6vw,18px)/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B}
 ._a0bd9 strong{color:#111;font-weight:700}
@@ -145,16 +145,16 @@ html.bbx-home body::after{
 
 /* Creator carousel */
 ._a17fd{position:relative;overflow:hidden;margin:40px 20px 0;padding:20px 0 30px;background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border-radius:20px;border:1px solid #E5E7EB;box-shadow:0 8px 32px rgba(0,0,0,.04)}
-._a17fd::before{content:'✨ Trusted by Top Creators! ✨';display:block;text-align:center;font-size:14px;font-weight:700;color:#1E40AF;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+._a17fd::before{content:'✨ Trusted by Top Creators! ✨';display:block;text-align:center;font-size:14px;font-weight:700;color:#9D174D;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
 ._b6770{display:flex;gap:20px;animation:scroll 45s linear infinite;will-change:transform;flex-wrap:nowrap}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-100% / 3))}}
 ._b6770:hover{animation-play-state:paused}
 ._fda51{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px 14px;background:#FFF;border:3px solid #E5E7EB;border-radius:16px;min-width:110px;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 12px rgba(0,0,0,.05);margin-bottom:0;position:relative;overflow:visible}
-._fda51:hover{background:linear-gradient(135deg,#FAFAFA 0%,#E5E7EB 100%);transform:translateY(-8px) scale(1.05);border-color:#93C5FD;box-shadow:0 12px 28px rgba(37,99,235,.15)}
+._fda51:hover{background:linear-gradient(135deg,#FAFAFA 0%,#E5E7EB 100%);transform:translateY(-8px) scale(1.05);border-color:#F9A8D4;box-shadow:0 12px 28px rgba(219,39,119,.15)}
 ._25e72{position:relative;width:64px;height:64px}
 ._51fe9{position:absolute;top:-12px;left:-14px;width:40px;height:auto;z-index:10;pointer-events:none}
 ._51fe9 img{width:100%;height:auto;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
-._dd7bb{width:64px;height:64px;border-radius:50%;object-fit:cover;border:4px solid #93C5FD;box-shadow:0 4px 12px rgba(37,99,235,.1);background:#E5E7EB}
+._dd7bb{width:64px;height:64px;border-radius:50%;object-fit:cover;border:4px solid #F9A8D4;box-shadow:0 4px 12px rgba(219,39,119,.1);background:#E5E7EB}
 ._799be{font-size:14px;font-weight:800;color:#111;text-align:center}
 ._66456{font-size:12px;color:#64748B;display:flex;align-items:center;gap:4px;font-weight:600}
 ._66456 svg{width:14px;height:14px;fill:#FBBF24}
@@ -174,11 +174,11 @@ html.bbx-home body::after{
 ._f937c{display:none}
 @keyframes popIn{from{opacity:0;transform:scale(.88) translateY(40px)}to{opacity:1;transform:scale(1) translateY(0)}}
 ._5f05e{display:flex;align-items:center;justify-content:center;padding:0 0 28px;border-bottom:2px solid #E5E7EB;margin-bottom:28px;position:relative;z-index:2}
-._a1e40{margin:0;font-weight:900;letter-spacing:-.02em;font-size:42px;text-align:center;display:inline-block;background:linear-gradient(120deg,#1E3A8A 0%,#1E40AF 30%,#2563EB 65%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
+._a1e40{margin:0;font-weight:900;letter-spacing:-.02em;font-size:42px;text-align:center;display:inline-block;background:linear-gradient(120deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
 ._a1e40::before{content:'✨ '}
 ._a1e40::after{content:' ✨'}
-._53418{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;border:2px solid #93C5FD;background:#FFF;cursor:pointer;color:#2563EB;transition:all .2s ease;position:absolute;right:-24px;top:-24px;z-index:3;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-._53418:hover{background:#2563EB;color:#FFF;transform:rotate(90deg)}
+._53418{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;border:2px solid #F9A8D4;background:#FFF;cursor:pointer;color:#DB2777;transition:all .2s ease;position:absolute;right:-24px;top:-24px;z-index:3;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+._53418:hover{background:#DB2777;color:#FFF;transform:rotate(90deg)}
 ._53418 svg{width:24px;height:24px;stroke:currentColor;fill:none}
 
 /* ===== GAME SECTIONS ===== */
@@ -188,17 +188,17 @@ html.bbx-home body::after{
 ._fb0bd{font-size:18px;font-weight:800;color:#1E293B;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:8px}
 ._57cc8{font-size:22px}
 ._16504{flex:1;height:2px;background:linear-gradient(90deg,#E5E7EB 0%,transparent 100%);border-radius:2px}
-._53347{background:linear-gradient(135deg,#2563EB,#3B82F6);color:#FFF;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 4px 12px rgba(37,99,235,.3)}
+._53347{background:linear-gradient(135deg,#DB2777,#EC4899);color:#FFF;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 4px 12px rgba(219,39,119,.3)}
 
 /* Games Grid */
 ._bb57a{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:2}
 ._b0e3e{position:relative;display:block;border-radius:18px;overflow:hidden;background:#FFF;box-shadow:0 4px 16px rgba(17,17,17,.08);border:3px solid #E2E8F0;color:#111;text-decoration:none!important;transition:all .3s ease}
-._b0e3e:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 16px 40px rgba(37,99,235,.15);border-color:#93C5FD}
+._b0e3e:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 16px 40px rgba(219,39,119,.15);border-color:#F9A8D4}
 ._254ca{display:block;width:100%;height:140px;object-fit:cover;background:linear-gradient(135deg,#F3F4F6,#E5E7EB)}
 ._4a66a{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FF6D00,#FF8C42);color:#FFF;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 4px 16px rgba(255,109,0,.5);z-index:10;animation:pulse 2s ease-in-out infinite}
 ._4a66a::before{content:'🔥 '}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-._bf4e1{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#2563EB,#34D399);color:#FFF;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 4px 16px rgba(16,185,129,.5);z-index:10;animation:pulse 2s ease-in-out infinite}
+._bf4e1{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#DB2777,#34D399);color:#FFF;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 4px 16px rgba(16,185,129,.5);z-index:10;animation:pulse 2s ease-in-out infinite}
 ._bf4e1::before{content:'✨ '}
 ._61842{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);color:#111;font-weight:700;padding:12px 18px;border-radius:14px;border:2px solid #E2E8F0;font-size:15px;box-shadow:0 4px 16px rgba(17,17,17,.12);white-space:nowrap}
 ._eb164{width:24px;height:24px;object-fit:contain;flex-shrink:0}
@@ -215,7 +215,7 @@ html.bbx-home body::after{
 ._22f61{position:absolute;left:10px;bottom:10px;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);color:rgba(255,255,255,0.9);font-weight:700;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);font-size:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);white-space:nowrap}
 
 ._4884d{padding:22px 0 0;text-align:center;border-top:2px solid #E5E7EB;margin-top:24px;position:relative;z-index:2}
-._ccfae{color:#1E40AF;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+._ccfae{color:#9D174D;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
 
 /* ===== RESPONSIVE ===== */
 @media (min-width:901px) and (max-width:1400px){
@@ -327,7 +327,7 @@ html.bbx-home body::after{
 ._025ac{display:none;position:absolute;top:-1px;left:0;width:100%;height:120px;z-index:1;pointer-events:none}
 ._025ac svg{position:absolute;top:0;left:0;width:100%;height:100%}
 ._61b61{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
-._476a0{position:absolute;top:-20px;color:#9CA3AF;opacity:0;animation:bbf-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
+._476a0{position:absolute;top:-20px;color:#F9A8D4;opacity:0;animation:bbf-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
 ._476a0:nth-child(1){left:3%;font-size:14px;animation-duration:14s;animation-delay:0s}
 ._476a0:nth-child(2){left:10%;font-size:10px;animation-duration:18s;animation-delay:2s}
 ._476a0:nth-child(3){left:18%;font-size:16px;animation-duration:12s;animation-delay:1s}
@@ -346,7 +346,7 @@ html.bbx-home body::after{
 @keyframes bbf-petalfall{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}5%{opacity:.7}50%{transform:translateY(50vh) translateX(20px) rotate(180deg);opacity:.8}95%{opacity:.6}100%{transform:translateY(100vh) translateX(-15px) rotate(360deg);opacity:0}}
 ._364cd{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:clamp(50px,6vw,70px) clamp(16px,4vw,40px) clamp(30px,4vw,50px)}
 ._e50ee{text-align:center;margin-bottom:clamp(14px,2.5vw,24px)}
-._1b73a{font:900 clamp(28px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 12px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#1E3A8A 0%,#1E40AF 30%,#2563EB 65%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 8s ease-in-out infinite;background-size:200% 100%}
+._1b73a{font:900 clamp(28px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 12px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 8s ease-in-out infinite;background-size:200% 100%}
 ._c8907{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
 ._68b84{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:3px solid var(--border);background:var(--bg);color:#111;font-weight:700;font-size:14px;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 12px rgba(17,17,17,.08);white-space:nowrap}
 ._68b84:hover{border-color:#FF6D00;transform:translateY(-3px) scale(1.03);box-shadow:0 6px 16px rgba(255,109,0,.2)}
@@ -384,11 +384,11 @@ html.bbx-home body::after{
 ._b211c span{position:relative;z-index:1}
 ._c34d6{text-align:center;margin-top:20px;opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease;pointer-events:none}
 ._c34d6.visible{opacity:1;transform:translateY(0);pointer-events:auto;margin-top:24px}
-._60954{position:relative;display:inline-flex;align-items:center;gap:14px;padding:22px 48px;background:linear-gradient(135deg,#2563EB,#3B82F6);border:none;border-radius:16px;color:#FFF;font-weight:900;font-size:18px;text-decoration:none!important;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 30px rgba(37,99,235,.4);text-transform:uppercase;letter-spacing:1px;overflow:hidden;animation:view-btn-glow 3s ease-in-out infinite}
-@keyframes view-btn-glow{0%,100%{box-shadow:0 8px 30px rgba(37,99,235,.4)}50%{box-shadow:0 12px 40px rgba(37,99,235,.6)}}
+._60954{position:relative;display:inline-flex;align-items:center;gap:14px;padding:22px 48px;background:linear-gradient(135deg,#DB2777,#EC4899);border:none;border-radius:16px;color:#FFF;font-weight:900;font-size:18px;text-decoration:none!important;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 30px rgba(219,39,119,.4);text-transform:uppercase;letter-spacing:1px;overflow:hidden;animation:view-btn-glow 3s ease-in-out infinite}
+@keyframes view-btn-glow{0%,100%{box-shadow:0 8px 30px rgba(219,39,119,.4)}50%{box-shadow:0 12px 40px rgba(219,39,119,.6)}}
 ._60954::before{content:'';position:absolute;top:0;left:-150%;width:200%;height:100%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.25) 45%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.25) 55%,transparent 60%);pointer-events:none;transition:left .6s cubic-bezier(.16,1,.3,1)}._60954:hover::before{left:150%}
 ._60954::after{--overflow-x:8px;content:'';position:absolute;top:-8px;left:calc(var(--overflow-x) * -1);display:none;border-image-slice:calc(6 * 56 / 20) fill;border-image-width:calc(32px / 3);border-image-repeat:round;width:calc(100% + var(--overflow-x) * 2);height:32px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3));z-index:10;pointer-events:none}
-._60954:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 16px 50px rgba(37,99,235,.5)}
+._60954:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 16px 50px rgba(219,39,119,.5)}
 ._60954 svg{width:24px;height:24px;transition:transform .3s ease;position:relative;z-index:1}
 ._60954:hover svg{transform:translateX(6px)}
 ._60954 span{position:relative;z-index:1}
@@ -418,7 +418,7 @@ html.bbx-home body::after{
 ._fc821 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
 ._fc821{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--light-gray:#F5F5F5;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:transparent;overflow:hidden}
 ._99e32{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
-._584bb{position:absolute;top:-20px;color:#9CA3AF;opacity:0;animation:bbh-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
+._584bb{position:absolute;top:-20px;color:#F9A8D4;opacity:0;animation:bbh-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
 ._584bb:nth-child(1){left:5%;font-size:14px;animation-duration:14s;animation-delay:0s}
 ._584bb:nth-child(2){left:15%;font-size:10px;animation-duration:18s;animation-delay:2s}
 ._584bb:nth-child(3){left:25%;font-size:16px;animation-duration:12s;animation-delay:1s}
@@ -434,17 +434,17 @@ html.bbx-home body::after{
 @keyframes bbh-petalfall{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}5%{opacity:.7}50%{transform:translateY(50vh) translateX(20px) rotate(180deg);opacity:.8}95%{opacity:.6}100%{transform:translateY(100vh) translateX(-15px) rotate(360deg);opacity:0}}
 ._68c40{max-width:1280px;margin:0 auto;padding:clamp(50px,6vw,70px) clamp(20px,4vw,40px) clamp(30px,4vw,50px);position:relative;z-index:2}
 ._77450{text-align:center;margin-bottom:clamp(20px,3vw,32px)}
-._22888{font:900 clamp(32px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 16px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#1E3A8A 0%,#1E40AF 30%,#2563EB 65%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
+._22888{font:900 clamp(32px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 16px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
 ._8d2b4{font:700 clamp(15px,1.6vw,18px)/1.4 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B;max-width:800px;margin:0 auto}
 ._ac19c{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(24px,4vw,32px);margin-bottom:16px}
 @media (min-width:768px){._ac19c{grid-template-columns:repeat(3,1fr)}}
 ._1ef0d{position:relative;background:#FFF;border:4px solid #E5E7EB;border-radius:24px;padding:clamp(44px,6vw,56px) clamp(24px,4vw,28px) clamp(32px,5vw,40px);text-align:center;transition:all .4s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 24px rgba(0,0,0,.05);overflow:visible}
 ._1ef0d::before{--overflow-x:8px;content:'';position:absolute;top:-8px;left:calc(var(--overflow-x) * -1);display:none;border-image-slice:calc(6 * 56 / 20) fill;border-image-width:calc(28px / 3);border-image-repeat:round;width:calc(100% + var(--overflow-x) * 2);height:28px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));z-index:5;pointer-events:none;-webkit-mask-image:radial-gradient(circle 35px at 50% calc(100% + 12px), transparent 100%, black 100%);mask-image:radial-gradient(circle 35px at 50% calc(100% + 12px), transparent 100%, black 100%)}
 ._1ef0d::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,transparent,rgba(0,0,0,.04));opacity:0;transition:opacity .3s ease;pointer-events:none;border-radius:20px}
-._1ef0d:hover{transform:translateY(-12px) scale(1.03) rotate(-1deg);border-color:#93C5FD;box-shadow:0 20px 50px rgba(37,99,235,.12)}
+._1ef0d:hover{transform:translateY(-12px) scale(1.03) rotate(-1deg);border-color:#F9A8D4;box-shadow:0 20px 50px rgba(219,39,119,.12)}
 ._1ef0d:hover::after{opacity:1}
-._0bba3{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:54px;height:54px;background:linear-gradient(135deg,#2563EB,#3B82F6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#FFF;box-shadow:0 6px 20px rgba(37,99,235,.5);border:4px solid #FFF;z-index:10;animation:pulse-badge 2s ease-in-out infinite}
-@keyframes pulse-badge{0%,100%{transform:translateX(-50%) scale(1);box-shadow:0 6px 20px rgba(37,99,235,.5)}50%{transform:translateX(-50%) scale(1.08);box-shadow:0 8px 28px rgba(37,99,235,.7)}}
+._0bba3{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:54px;height:54px;background:linear-gradient(135deg,#DB2777,#EC4899);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#FFF;box-shadow:0 6px 20px rgba(219,39,119,.5);border:4px solid #FFF;z-index:10;animation:pulse-badge 2s ease-in-out infinite}
+@keyframes pulse-badge{0%,100%{transform:translateX(-50%) scale(1);box-shadow:0 6px 20px rgba(219,39,119,.5)}50%{transform:translateX(-50%) scale(1.08);box-shadow:0 8px 28px rgba(219,39,119,.7)}}
 ._c7a27{width:56px;height:56px;margin:12px auto;display:block;filter:drop-shadow(0 4px 12px rgba(0,0,0,.12));animation:float-icon 3s ease-in-out infinite}
 @keyframes float-icon{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 ._1ef0d:hover ._c7a27{animation:bounce-icon .6s ease}
@@ -453,29 +453,29 @@ html.bbx-home body::after{
 ._a3b05{font-size:clamp(14px,1.5vw,16px);font-weight:600;color:#64748B;line-height:1.6;margin:0}
 ._9f7c6{margin-top:clamp(50px,6vw,70px)}
 ._4e5b3{text-align:center;margin-bottom:28px}
-._ebcc8{font:900 clamp(32px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 16px;letter-spacing:-.02em;background:linear-gradient(110deg,#1E3A8A 0%,#1E40AF 30%,#2563EB 65%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+._ebcc8{font:900 clamp(32px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 16px;letter-spacing:-.02em;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 ._a7fbf{font:700 clamp(15px,1.6vw,18px)/1.4 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B;margin:0}
 ._416ca{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
 @media (min-width:640px){._416ca{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){._416ca{grid-template-columns:repeat(5,1fr)}}
 ._605d9{background:#FFF;border:3px solid #E5E7EB;border-radius:20px;overflow:visible;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 6px 20px rgba(0,0,0,.06);position:relative;display:flex;flex-direction:column}
 ._605d9::before{--overflow-x:6px;content:'';position:absolute;top:-6px;left:calc(var(--overflow-x) * -1);display:none;border-image-slice:calc(6 * 56 / 20) fill;border-image-width:calc(24px / 3);border-image-repeat:round;width:calc(100% + var(--overflow-x) * 2);height:24px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));z-index:10;pointer-events:none}
-._605d9:hover{transform:translateY(-8px) scale(1.02);border-color:#93C5FD;box-shadow:0 16px 40px rgba(37,99,235,.12)}
+._605d9:hover{transform:translateY(-8px) scale(1.02);border-color:#F9A8D4;box-shadow:0 16px 40px rgba(219,39,119,.12)}
 ._4ee32{position:relative;width:100%;height:180px;overflow:hidden;border-radius:17px 17px 0 0}
 ._e3a0e{width:100%;height:100%;object-fit:cover;background:linear-gradient(135deg,#F9FAFB,#F3F4F6)}
 ._5ae98{padding:20px;text-align:center;display:flex;flex-direction:column;flex:1}
 ._0de19{font-size:clamp(18px,2vw,22px);font-weight:900;color:#111;margin:0 0 10px}
 ._1db54{font-size:14px;font-weight:600;color:#64748B;margin:0 0 16px}
-._d310a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px 20px;background:linear-gradient(135deg,#2563EB 0%,#3B82F6 100%);color:#FFF;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;border-radius:12px;border:none;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(37,99,235,.3);text-decoration:none!important;position:relative;overflow:hidden}
+._d310a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px 20px;background:linear-gradient(135deg,#DB2777 0%,#EC4899 100%);color:#FFF;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;border-radius:12px;border:none;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(219,39,119,.3);text-decoration:none!important;position:relative;overflow:hidden}
 ._d310a::before{content:'';position:absolute;top:0;left:-150%;width:200%;height:100%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.2) 45%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.2) 55%,transparent 60%);pointer-events:none;transition:left .5s cubic-bezier(.16,1,.3,1)}._d310a:hover::before{left:150%}
-._d310a:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,.5);background:linear-gradient(135deg,#3B82F6,#2563EB)}
+._d310a:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(219,39,119,.5);background:linear-gradient(135deg,#EC4899,#DB2777)}
 ._d310a svg{width:18px;height:18px;fill:currentColor;position:relative;z-index:1}
 ._d310a span{position:relative;z-index:1}
 ._535d0{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:100000;padding:20px;align-items:center;justify-content:center}
 ._535d0.active{display:flex}
 ._a9146{position:relative;width:100%;max-width:900px;background:#111;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.8)}
-._a004e{position:absolute;top:-50px;right:0;width:44px;height:44px;background:#2563EB;border:none;border-radius:50%;color:#FFF;font-size:24px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s ease;z-index:10}
-._a004e:hover{transform:scale(1.1) rotate(90deg);background:#3B82F6}
+._a004e{position:absolute;top:-50px;right:0;width:44px;height:44px;background:#DB2777;border:none;border-radius:50%;color:#FFF;font-size:24px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s ease;z-index:10}
+._a004e:hover{transform:scale(1.1) rotate(90deg);background:#EC4899}
 ._d26c0{position:relative;padding-bottom:56.25%;height:0}
 ._d26c0 iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
 ._9fecd{display:none;position:absolute;bottom:0;left:0;width:100%;height:100px;z-index:1;pointer-events:none}
@@ -491,7 +491,7 @@ html.bbx-home body::after{
 ._24fcc {
   --text: #111111;
   --bg: #FFFFFF;
-  --blue: #2563EB;
+  --blue: #DB2777;
   --orange: #FF6D00;
   --gray: #64748B;
   --light-gray: #FAFAFA;
@@ -516,7 +516,7 @@ html.bbx-home body::after{
 /* Petals */
 ._a512d {
   position: absolute;
-  color: #9CA3AF;
+  color: #F9A8D4;
   pointer-events: none;
   z-index: 1;
   animation: bbtr-petalfall 15s ease-in-out infinite;
@@ -550,7 +550,7 @@ html.bbx-home body::after{
   font: 900 clamp(28px, 5vw, 52px)/1.15 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
-  background: linear-gradient(110deg, #1E3A8A 0%, #1E40AF 30%, #2563EB 65%, #3B82F6 100%);
+  background: linear-gradient(110deg, #831843 0%, #9D174D 30%, #DB2777 65%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -661,7 +661,7 @@ html.bbx-home body::after{
 }
 
 ._1264f:hover {
-  border-color: #93C5FD;
+  border-color: #F9A8D4;
   box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
 }
 
@@ -736,14 +736,14 @@ html.bbx-home body::after{
 ._0187c {
   font-size: clamp(19px, 2.3vw, 24px);
   font-weight: 900;
-  color: #1E3A8A;
+  color: #831843;
   margin: 0 0 12px;
 }
 
 ._b8e2d {
   font-size: clamp(14px, 1.5vw, 16px);
   font-weight: 600;
-  color: #2563EB;
+  color: #DB2777;
   line-height: 1.6;
   margin: 0;
   max-width: 700px;
@@ -768,7 +768,7 @@ html.bbx-home body::after{
   font: 900 clamp(32px, 5vw, 52px)/1.15 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
-  background: linear-gradient(110deg, #1E3A8A 0%, #1E40AF 30%, #2563EB 65%, #3B82F6 100%);
+  background: linear-gradient(110deg, #831843 0%, #9D174D 30%, #DB2777 65%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -820,7 +820,7 @@ html.bbx-home body::after{
 ._dfb5f {
   font-size: 11px;
   font-weight: 800;
-  color: #2563EB;
+  color: #DB2777;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -873,7 +873,7 @@ html.bbx-home body::after{
 
 ._e70fc:hover {
   transform: translateY(-10px) scale(1.02);
-  border-color: #93C5FD;
+  border-color: #F9A8D4;
   box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
 }
 
@@ -894,7 +894,7 @@ html.bbx-home body::after{
   height: 56px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #93C5FD;
+  border: 3px solid #F9A8D4;
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
 }
 
@@ -913,7 +913,7 @@ html.bbx-home body::after{
 ._67be6 {
   font-size: 12px;
   font-weight: 700;
-  color: #2563EB;
+  color: #DB2777;
   margin: 0 0 6px;
   display: flex;
   align-items: center;
@@ -959,7 +959,7 @@ html.bbx-home body::after{
   display: inline-block;
   font-size: 13px;
   font-weight: 800;
-  color: #2563EB;
+  color: #DB2777;
   background: none;
   border: none;
   padding: 0;
@@ -969,7 +969,7 @@ html.bbx-home body::after{
 }
 
 ._bec78:hover {
-  color: #1D4ED8;
+  color: #BE185D;
 }
 
 ._bec78.hidden {
@@ -995,7 +995,7 @@ html.bbx-home body::after{
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: linear-gradient(135deg, #2563EB 0%, #059669 100%);
+  background: linear-gradient(135deg, #DB2777 0%, #059669 100%);
   color: #FFFFFF;
   padding: 5px 12px;
   border-radius: 8px;
@@ -1078,7 +1078,7 @@ html.bbx-home body::after{
 ._acc57 {
   --text: #111111;
   --bg: #FFFFFF;
-  --blue: #2563EB;
+  --blue: #DB2777;
   --orange: #FF6D00;
   --gray: #64748B;
   --light-gray: #FAFAFA;
@@ -1103,7 +1103,7 @@ html.bbx-home body::after{
 /* Petals */
 ._e145e {
   position: absolute;
-  color: #9CA3AF;
+  color: #F9A8D4;
   pointer-events: none;
   z-index: 1;
   animation: bbfaq-petalfall 15s ease-in-out infinite;
@@ -1129,7 +1129,7 @@ html.bbx-home body::after{
   font: 900 clamp(32px, 5vw, 52px)/1.15 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
-  background: linear-gradient(110deg, #1E3A8A 0%, #1E40AF 30%, #2563EB 65%, #3B82F6 100%);
+  background: linear-gradient(110deg, #831843 0%, #9D174D 30%, #DB2777 65%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1143,14 +1143,14 @@ html.bbx-home body::after{
 }
 
 ._c2a5c a {
-  color: #2563EB;
+  color: #DB2777;
   font-weight: 800;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 ._c2a5c a:hover {
-  color: #1D4ED8;
+  color: #BE185D;
   text-decoration: underline;
 }
 
@@ -1187,14 +1187,14 @@ html.bbx-home body::after{
 ._7a293 {
   font-size: clamp(20px, 2.5vw, 26px);
   font-weight: 900;
-  color: #1E3A8A;
+  color: #831843;
   margin: 0 0 12px;
 }
 
 ._b889d {
   font-size: clamp(14px, 1.5vw, 16px);
   font-weight: 600;
-  color: #2563EB;
+  color: #DB2777;
   line-height: 1.6;
   margin: 0 0 20px;
   max-width: 600px;
@@ -1306,12 +1306,12 @@ html.bbx-home body::after{
 
 ._a8c26:hover {
   transform: translateY(-6px) scale(1.02);
-  border-color: #93C5FD;
+  border-color: #F9A8D4;
   box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
 }
 
 ._a8c26.active {
-  border-color: #2563EB;
+  border-color: #DB2777;
   box-shadow: 0 12px 36px rgba(37, 99, 235, 0.15);
 }
 
@@ -1361,7 +1361,7 @@ html.bbx-home body::after{
 }
 
 ._a8c26.active ._9ac6c {
-  background: linear-gradient(135deg, #2563EB, #3B82F6);
+  background: linear-gradient(135deg, #DB2777, #EC4899);
   transform: rotate(180deg);
 }
 
@@ -1398,14 +1398,14 @@ html.bbx-home body::after{
 }
 
 ._8d759 a {
-  color: #2563EB;
+  color: #DB2777;
   font-weight: 800;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 ._8d759 a:hover {
-  color: #1D4ED8;
+  color: #BE185D;
   text-decoration: underline;
 }
 
@@ -1599,7 +1599,7 @@ html.bbx-home body::after{
 [data-reveal-delay="3"]{transition-delay:.45s}
 [data-reveal-delay="4"]{transition-delay:.6s}
 /* ===== INTERACTIVE BACKGROUND ===== */
-[data-cursor-glow]{position:fixed;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.1) 0%,rgba(124,58,237,.05) 35%,transparent 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .4s ease}
+[data-cursor-glow]{position:fixed;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(219,39,119,.12) 0%,rgba(244,114,182,.06) 35%,transparent 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .4s ease}
 @media (max-width:768px){[data-cursor-glow]{display:none}}
 [data-cursor-glow].active{opacity:1}
 
@@ -1608,7 +1608,16 @@ html.bbx-home body::after{
 [data-particle]{position:fixed;border-radius:50%;pointer-events:none;z-index:0;animation:particle-drift linear infinite}
 @media (max-width:480px){[data-particle]{display:none}}
 @keyframes particle-drift{0%{transform:translateY(0) translateX(0);opacity:0}5%{opacity:var(--p-opacity,.5)}50%{transform:translateY(calc(var(--p-dist,-50vh))) translateX(var(--p-drift,20px))}95%{opacity:var(--p-opacity,.3)}100%{transform:translateY(calc(var(--p-dist,-50vh) * 2)) translateX(calc(var(--p-drift,20px) * -1));opacity:0}}
+
+@keyframes sakura-fall{0%{transform:translateY(-5vh) translateX(0) rotate(0deg);opacity:0}8%{opacity:.55}50%{transform:translateY(52vh) translateX(30px) rotate(180deg);opacity:.45}100%{transform:translateY(105vh) translateX(-20px) rotate(360deg);opacity:0}}
+._sakura-petal{position:fixed;pointer-events:none;z-index:1;font-size:16px;opacity:0}
 </style>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></symbol>
+<symbol id="i-people" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></symbol>
+</svg>
 <script>document.documentElement.classList.add('bbx-home')</script>
 
 <div class="_bbx-blobs">
@@ -1653,7 +1662,7 @@ html.bbx-home body::after{
   <div class="_d389b">
     <div class="_a5a29">
       <span class="_c7e67">200K+ Happy Customers</span>
-      <span class="_9e8f9"><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg></span>
+      <span class="_9e8f9"><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg></span>
     </div>
     <h1 class="_10727">Get Your <span class="accent">Dream Items&nbsp;</span><br>Delivered in Minutes!</h1>
     <p class="_a0bd9"><strong>BuyBlox</strong> is the <strong>#1 marketplace</strong> to get your <strong>SAB, MM2, ADM, GAG, PVB</strong> items and more - <strong>quickly!</strong> ✨<br>We've got <strong>instant delivery</strong>, <strong>crazy good prices</strong>, and everything is <strong>100% safe and easy</strong>. ✨</p>
@@ -1663,18 +1672,18 @@ html.bbx-home body::after{
     </div>
     <div class="_a17fd">
       <div class="_b6770">
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Flucdy.jpg?v=1761587034" alt="Flucdy"></div><div class="_799be">Flucdy</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>795,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/soluh.jpg?v=1761587034" alt="soluh"></div><div class="_799be">soluh</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>526,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/snag.jpg?v=1761587034" alt="snag"></div><div class="_799be">snag</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>581,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/CorGe.jpg?v=1761587034" alt="CoRge"></div><div class="_799be">CoRge</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>198,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/iLawd.jpg?v=1761587034" alt="iLawd"></div><div class="_799be">iLawd</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>34,500</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Pfp.webp?v=1767460040" alt="Overused"></div><div class="_799be">Overused</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>101,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Flucdy.jpg?v=1761587034" alt="Flucdy"></div><div class="_799be">Flucdy</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>795,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/soluh.jpg?v=1761587034" alt="soluh"></div><div class="_799be">soluh</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>526,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/snag.jpg?v=1761587034" alt="snag"></div><div class="_799be">snag</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>581,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/CorGe.jpg?v=1761587034" alt="CoRge"></div><div class="_799be">CoRge</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>198,000</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/iLawd.jpg?v=1761587034" alt="iLawd"></div><div class="_799be">iLawd</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>34,500</div></div>
-        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Pfp.webp?v=1767460040" alt="Overused"></div><div class="_799be">Overused</div><div class="_66456"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>101,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Flucdy.jpg?v=1761587034" alt="Flucdy"></div><div class="_799be">Flucdy</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>795,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/soluh.jpg?v=1761587034" alt="soluh"></div><div class="_799be">soluh</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>526,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/snag.jpg?v=1761587034" alt="snag"></div><div class="_799be">snag</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>581,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/CorGe.jpg?v=1761587034" alt="CoRge"></div><div class="_799be">CoRge</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>198,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/iLawd.jpg?v=1761587034" alt="iLawd"></div><div class="_799be">iLawd</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>34,500</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Pfp.webp?v=1767460040" alt="Overused"></div><div class="_799be">Overused</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>101,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Flucdy.jpg?v=1761587034" alt="Flucdy"></div><div class="_799be">Flucdy</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>795,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/soluh.jpg?v=1761587034" alt="soluh"></div><div class="_799be">soluh</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>526,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/snag.jpg?v=1761587034" alt="snag"></div><div class="_799be">snag</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>581,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/CorGe.jpg?v=1761587034" alt="CoRge"></div><div class="_799be">CoRge</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>198,000</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/iLawd.jpg?v=1761587034" alt="iLawd"></div><div class="_799be">iLawd</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>34,500</div></div>
+        <div class="_fda51"><div class="_25e72"><img class="_dd7bb" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/Pfp.webp?v=1767460040" alt="Overused"></div><div class="_799be">Overused</div><div class="_66456"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg>101,000</div></div>
       </div>
     </div>
   </div>
@@ -1695,12 +1704,12 @@ html.bbx-home body::after{
         <div class="_16504"></div>
       </div>
       <div class="_bb57a">
-        <a class="_b0e3e" href="/collections/steal-a-brainrot"><img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_5786f262-ab0b-451d-9754-884c23e5471a.webp?v=1766671560" alt="SAB"><div class="_61842"><img class="_eb164" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/sab-icon.png?v=1759618034" alt=""><b>Steal A Brainrot</b></div></a>
-        <a class="_b0e3e" href="/collections/mm2"><img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_15f0b0f0-e6ae-4777-abf0-8ea4ce9012a3.webp?v=1766671944" alt="MM2"><div class="_61842"><img class="_eb164" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/mm2-icon.png?v=1759618168" alt=""><b>Murder Mystery 2</b></div></a>
-        <a class="_b0e3e" href="/collections/adopt-me"><img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_f5a53eb6-9bb3-497c-b01a-0abf5402101d.webp?v=1766671544" alt="Adopt Me"><div class="_61842"><img class="_eb164 adopt" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/giraffe-903.webp?v=1766453469" alt=""><b>Adopt Me</b></div></a>
-        <a class="_b0e3e" href="/collections/escape-tsunami-for-brainrots"><img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter.jpg?v=1768498035" alt="Escape Tsunami"><div class="_61842"><img class="_eb164" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/EscapeIcon.png?v=1768504953" alt=""><b>Escape Tsunami</b></div></a>
-        <a class="_b0e3e" href="/collections/grow-a-garden"><img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_6187aa27-f1d6-41e5-80d5-395fb147cf58.webp?v=1766671582" alt="GAG"><div class="_61842"><img class="_eb164" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/gag-icon.png?v=1759618432" alt=""><b>Grow A Garden</b></div></a>
-        <a class="_b0e3e" href="/collections/plants-vs-brainrots"><img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_675598bc-8dfa-415b-a732-24bfef9c1dbe.webp?v=1766671565" alt="PVB"><div class="_61842"><img class="_eb164" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/pvb-icon.png?v=1759618054" alt=""><b>Plants Vs Brainrots</b></div></a>
+        <a class="_b0e3e" href="/collections/steal-a-brainrot"><img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_5786f262-ab0b-451d-9754-884c23e5471a.webp?v=1766671560" alt="SAB"><div class="_61842"><img class="_eb164" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/sab-icon.png?v=1759618034" alt=""><b>Steal A Brainrot</b></div></a>
+        <a class="_b0e3e" href="/collections/mm2"><img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_15f0b0f0-e6ae-4777-abf0-8ea4ce9012a3.webp?v=1766671944" alt="MM2"><div class="_61842"><img class="_eb164" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/mm2-icon.png?v=1759618168" alt=""><b>Murder Mystery 2</b></div></a>
+        <a class="_b0e3e" href="/collections/adopt-me"><img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_f5a53eb6-9bb3-497c-b01a-0abf5402101d.webp?v=1766671544" alt="Adopt Me"><div class="_61842"><img class="_eb164 adopt" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/giraffe-903.webp?v=1766453469" alt=""><b>Adopt Me</b></div></a>
+        <a class="_b0e3e" href="/collections/escape-tsunami"><img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter.jpg?v=1768498035" alt="Escape Tsunami"><div class="_61842"><img class="_eb164" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/EscapeIcon.png?v=1768504953" alt=""><b>Escape Tsunami</b></div></a>
+        <a class="_b0e3e" href="/collections/grow-a-garden"><img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_6187aa27-f1d6-41e5-80d5-395fb147cf58.webp?v=1766671582" alt="GAG"><div class="_61842"><img class="_eb164" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/gag-icon.png?v=1759618432" alt=""><b>Grow A Garden</b></div></a>
+        <a class="_b0e3e" href="/collections/plants-vs-brainrots"><img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_675598bc-8dfa-415b-a732-24bfef9c1dbe.webp?v=1766671565" alt="PVB"><div class="_61842"><img class="_eb164" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/pvb-icon.png?v=1759618054" alt=""><b>Plants Vs Brainrots</b></div></a>
 
       </div>
     </div>
@@ -1714,17 +1723,17 @@ html.bbx-home body::after{
       </div>
       <div class="_48185">
         <div class="_79eae">
-          <img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_b44d4fb4-baa1-4d2d-bace-af43f79d1a84.webp?v=1768501022" alt="Rivals">
+          <img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_b44d4fb4-baa1-4d2d-bace-af43f79d1a84.webp?v=1768501022" alt="Rivals">
           <div class="_eac7f"><span class="_73a84">Coming Soon...</span></div>
           <div class="_22f61"><b>Rivals</b></div>
         </div>
         <div class="_79eae">
-          <img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_5b9f15e5-5525-4382-bce6-4de05a97dc48.webp?v=1768501072" alt="Blox Fruits">
+          <img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_5b9f15e5-5525-4382-bce6-4de05a97dc48.webp?v=1768501072" alt="Blox Fruits">
           <div class="_eac7f"><span class="_73a84">Coming Soon...</span></div>
           <div class="_22f61"><b>Blox Fruits</b></div>
         </div>
         <div class="_79eae">
-          <img class="_254ca" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_b5764625-4006-476e-b98d-6e1b749bccc0.webp?v=1768501086" alt="99 Nights">
+          <img class="_254ca" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_b5764625-4006-476e-b98d-6e1b749bccc0.webp?v=1768501086" alt="99 Nights">
           <div class="_eac7f"><span class="_73a84">Coming Soon...</span></div>
           <div class="_22f61"><b>99 Nights</b></div>
         </div>
@@ -1761,7 +1770,7 @@ html.bbx-home body::after{
         <span style="display:none;">🐾</span>
         <span>Adopt Me</span>
       </button>
-      <button class="_68b84" data-game="etfb" data-url="/collections/escape-tsunami-for-brainrots" role="tab" aria-selected="false">
+      <button class="_68b84" data-game="etfb" data-url="/collections/escape-tsunami" role="tab" aria-selected="false">
         <img class="icon" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/EscapeIcon.png?v=1768504953" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
         <span style="display:none;">🌊</span>
         <span>Escape Tsunami</span>
@@ -1914,7 +1923,7 @@ html.bbx-home body::after{
     <!-- Escape Tsunami Grid -->
     <div class="_15afd" style="display:none;">
       <div class="_a0ccc hidden" data-grid="etfb" role="tabpanel">
-        {% assign etfb_collection = collections['escape-tsunami-for-brainrots'] %}
+        {% assign etfb_collection = collections['escape-tsunami'] %}
         {% assign etfb_count = 0 %}
         {% if etfb_collection.products.size > 0 %}
           {% for product in etfb_collection.products %}
@@ -1934,7 +1943,7 @@ html.bbx-home body::after{
           {% if etfb_count == 0 %}<div class="_89c0a"><div class="_171af">🌊</div><div class="_bd240">Coming Soon!</div><div class="_d1ee8">Awesome items are on the way! 🎮</div></div>{% endif %}
         {% else %}<div class="_89c0a"><div class="_171af">🌊</div><div class="_bd240">Coming Soon!</div><div class="_d1ee8">Awesome items are on the way! 🎮</div></div>{% endif %}
       </div>
-      <div class="_c34d6" data-view="etfb" style="display:none;"><a href="/collections/escape-tsunami-for-brainrots" class="_60954"><span>See All Escape Tsunami Items</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M13 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="_c34d6" data-view="etfb" style="display:none;"><a href="/collections/escape-tsunami" class="_60954"><span>See All Escape Tsunami Items</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M13 5l7 7-7 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
 
   </div>
@@ -1953,19 +1962,19 @@ html.bbx-home body::after{
 <div class="_ac19c">
 <div class="_1ef0d">
 <div class="_0bba3">1</div>
-<img class="_c7a27" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/game-controller-icon.png?v=1764925000" alt="" onerror="this.style.display='none'">
+<img class="_c7a27" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/game-controller-icon.png?v=1764925000" alt="" onerror="this.style.display='none'">
 <h3 class="_fc0c1">Choose Your Game</h3>
 <p class="_a3b05">Begin by selecting the game you're interested in, such as Murder Mystery 2, Plants Vs Brainrots, Grow A Garden, or Steal A Brainrot. Browse our huge collection of cool items!</p>
 </div>
 <div class="_1ef0d">
 <div class="_0bba3">2</div>
-<img class="_c7a27" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/video-tutorial-icon.png?v=1764925000" alt="" onerror="this.style.display='none'">
+<img class="_c7a27" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/video-tutorial-icon.png?v=1764925000" alt="" onerror="this.style.display='none'">
 <h3 class="_fc0c1">Follow the Tutorial</h3>
 <p class="_a3b05">Click the "View Tutorial" button under your chosen game to see a step-by-step guide on how to claim your items. It's super easy and only takes a minute!</p>
 </div>
 <div class="_1ef0d">
 <div class="_0bba3">3</div>
-<img class="_c7a27" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/instant-delivery-icon.png?v=1764925000" alt="" onerror="this.style.display='none'">
+<img class="_c7a27" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/instant-delivery-icon.png?v=1764925000" alt="" onerror="this.style.display='none'">
 <h3 class="_fc0c1">Instant Delivery</h3>
 <p class="_a3b05">Our super-fast delivery bot sends your items straight to your game account in just a few minutes! No waiting around - you get your stuff right away and can start playing instantly!</p>
 </div>
@@ -2118,34 +2127,34 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_15b53767-6989-4070-972f-c265ea2a43b2.webp?v=1764991450" alt="Alex M">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_15b53767-6989-4070-972f-c265ea2a43b2.webp?v=1764991450" alt="Alex M">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Alex M.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
                   Steal A Brainrot
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
             <div class="_dfb5f">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
               Purchase Proof
             </div>
-            <img class="_04749" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image.webp?v=1764991802" alt="Purchase proof">
+            <img class="_04749" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image.webp?v=1764991802" alt="Purchase proof">
             <p class="_ce825">"Super fast delivery! Got my items in like 3 minutes. Best site ever!"</p>
             <div class="_cc458">
               <div class="_04dc8">2 days ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2155,34 +2164,34 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_cb1af967-299c-4ccd-9f55-2d97d897dcf8.webp?v=1764991470" alt="Emma S">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_cb1af967-299c-4ccd-9f55-2d97d897dcf8.webp?v=1764991470" alt="Emma S">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Emma S.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/mm2-icon.png?v=1730903272" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/mm2-icon.png?v=1730903272" alt="">
                   Murder Mystery 2
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
             <div class="_dfb5f">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
               Purchase Proof
             </div>
-            <img class="_04749" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_aa7840cd-92c2-4e17-b359-4f409ea2da77.webp?v=1764992061" alt="Purchase proof">
+            <img class="_04749" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_aa7840cd-92c2-4e17-b359-4f409ea2da77.webp?v=1764992061" alt="Purchase proof">
             <p class="_ce825">"My parents loved that they didn't need my password. Super safe!"</p>
             <div class="_cc458">
               <div class="_04dc8">5 days ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2192,34 +2201,34 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_bd779593-0323-43ad-86b6-e0dd36fa9ad8.webp?v=1764991476" alt="Jake P">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_bd779593-0323-43ad-86b6-e0dd36fa9ad8.webp?v=1764991476" alt="Jake P">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Jake P.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
                   Steal A Brainrot
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
             <div class="_dfb5f">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
               Purchase Proof
             </div>
-            <img class="_04749" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_dd2341f4-51c1-4f13-afb9-c1e0db0a2504.webp?v=1764991918" alt="Purchase proof">
+            <img class="_04749" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_dd2341f4-51c1-4f13-afb9-c1e0db0a2504.webp?v=1764991918" alt="Purchase proof">
             <p class="_ce825">"Bought 5 items, all came instantly! Prices are way better than other sites."</p>
             <div class="_cc458">
               <div class="_04dc8">1 week ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2229,21 +2238,21 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_e05daf20-157e-46fc-b6c9-1c4ff8a5fa58.webp?v=1764991481" alt="Mia L">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_e05daf20-157e-46fc-b6c9-1c4ff8a5fa58.webp?v=1764991481" alt="Mia L">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Mia L.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/gag-icon.png?v=1746572982" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/gag-icon.png?v=1746572982" alt="">
                   Grow A Garden
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
@@ -2251,7 +2260,7 @@ html.bbx-home body::after{
             <div class="_cc458">
               <div class="_04dc8">1 week ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2261,21 +2270,21 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_905352fd-34c4-4662-a3a3-cbbde91a62e8.webp?v=1764991521" alt="Noah T">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_905352fd-34c4-4662-a3a3-cbbde91a62e8.webp?v=1764991521" alt="Noah T">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Noah T.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/pvb-icon.png?v=1746572982" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/pvb-icon.png?v=1746572982" alt="">
                   Plants Vs Brainrots
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
@@ -2283,7 +2292,7 @@ html.bbx-home body::after{
             <div class="_cc458">
               <div class="_04dc8">2 weeks ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2293,21 +2302,21 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_8a112c54-bd9d-4eb7-8e41-b26db81a7169.webp?v=1764991559" alt="Liam R">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_8a112c54-bd9d-4eb7-8e41-b26db81a7169.webp?v=1764991559" alt="Liam R">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Liam R.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
                   Steal A Brainrot
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
@@ -2315,7 +2324,7 @@ html.bbx-home body::after{
             <div class="_cc458">
               <div class="_04dc8">3 weeks ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2325,21 +2334,21 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_8746a749-3858-4487-a9cc-af156c94ed10.webp?v=1764991571" alt="Sophie W">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_8746a749-3858-4487-a9cc-af156c94ed10.webp?v=1764991571" alt="Sophie W">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Sophie W.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
                   Steal A Brainrot
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
@@ -2347,7 +2356,7 @@ html.bbx-home body::after{
             <div class="_cc458">
               <div class="_04dc8">3 weeks ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2357,34 +2366,34 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_15b53767-6989-4070-972f-c265ea2a43b2.webp?v=1764991450" alt="Alex M">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_15b53767-6989-4070-972f-c265ea2a43b2.webp?v=1764991450" alt="Alex M">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Alex M.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
                   Steal A Brainrot
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
             <div class="_dfb5f">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
               Purchase Proof
             </div>
-            <img class="_04749" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image.webp?v=1764991802" alt="Purchase proof">
+            <img class="_04749" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image.webp?v=1764991802" alt="Purchase proof">
             <p class="_ce825">"Super fast delivery! Got my items in like 3 minutes. Best site ever!"</p>
             <div class="_cc458">
               <div class="_04dc8">2 days ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2393,34 +2402,34 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_cb1af967-299c-4ccd-9f55-2d97d897dcf8.webp?v=1764991470" alt="Emma S">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_cb1af967-299c-4ccd-9f55-2d97d897dcf8.webp?v=1764991470" alt="Emma S">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Emma S.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/mm2-icon.png?v=1730903272" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/mm2-icon.png?v=1730903272" alt="">
                   Murder Mystery 2
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
             <div class="_dfb5f">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
               Purchase Proof
             </div>
-            <img class="_04749" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_aa7840cd-92c2-4e17-b359-4f409ea2da77.webp?v=1764992061" alt="Purchase proof">
+            <img class="_04749" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_aa7840cd-92c2-4e17-b359-4f409ea2da77.webp?v=1764992061" alt="Purchase proof">
             <p class="_ce825">"My parents loved that they didn't need my password. Super safe!"</p>
             <div class="_cc458">
               <div class="_04dc8">5 days ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2429,34 +2438,34 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_bd779593-0323-43ad-86b6-e0dd36fa9ad8.webp?v=1764991476" alt="Jake P">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_bd779593-0323-43ad-86b6-e0dd36fa9ad8.webp?v=1764991476" alt="Jake P">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Jake P.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/sab-icon.png?v=1746572981" alt="">
                   Steal A Brainrot
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
             <div class="_dfb5f">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
               Purchase Proof
             </div>
-            <img class="_04749" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_dd2341f4-51c1-4f13-afb9-c1e0db0a2504.webp?v=1764991918" alt="Purchase proof">
+            <img class="_04749" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/image_dd2341f4-51c1-4f13-afb9-c1e0db0a2504.webp?v=1764991918" alt="Purchase proof">
             <p class="_ce825">"Bought 5 items, all came instantly! Prices are way better than other sites."</p>
             <div class="_cc458">
               <div class="_04dc8">1 week ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2465,21 +2474,21 @@ html.bbx-home body::after{
           <div class="_e70fc">
             <div class="_0442d">
               <div class="_f9aeb">
-                <img class="_01234" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_e05daf20-157e-46fc-b6c9-1c4ff8a5fa58.webp?v=1764991481" alt="Mia L">
+                <img class="_01234" loading="lazy" src="https://cdn.shopify.com/s/files/1/0929/6212/8216/files/noFilter_e05daf20-157e-46fc-b6c9-1c4ff8a5fa58.webp?v=1764991481" alt="Mia L">
                 
               </div>
               <div class="_1652a">
                 <div class="_1f636">Mia L.</div>
                 <div class="_67be6">
-                  <img class="_ceb57" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/gag-icon.png?v=1746572982" alt="">
+                  <img class="_ceb57" loading="lazy" src="https://cdn.shopify.com/s/files/1/0274/1351/8813/files/gag-icon.png?v=1746572982" alt="">
                   Grow A Garden
                 </div>
                 <div class="_5c4f4">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+                  <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
                 </div>
               </div>
             </div>
@@ -2487,7 +2496,7 @@ html.bbx-home body::after{
             <div class="_cc458">
               <div class="_04dc8">1 week ago</div>
               <div class="_e30bb">
-                <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <svg viewBox="0 0 24 24"><use href="#i-check"/></svg>
                 Verified
               </div>
             </div>
@@ -2501,7 +2510,7 @@ html.bbx-home body::after{
   <!-- Bottom Meadow Wave -->
   <div class="_69f80">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,100 L0,60 Q120,40 240,55 T480,50 T720,60 T960,45 T1200,55 T1440,50 L1440,100 Z" fill="#DBEAFE"/>
+      <path d="M0,100 L0,60 Q120,40 240,55 T480,50 T720,60 T960,45 T1200,55 T1440,50 L1440,100 Z" fill="#FCE7F3"/>
     </svg>
   </div>
 </section>
@@ -2525,7 +2534,7 @@ html.bbx-home body::after{
         <button class="_a745c" onclick="toggleFAQ(this)">
           <span class="_ad076">Is BuyBlox safe and legit?</span>
           <div class="_9ac6c">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#i-chev"/></svg>
           </div>
         </button>
         <div class="_d9db0">
@@ -2540,7 +2549,7 @@ html.bbx-home body::after{
         <button class="_a745c" onclick="toggleFAQ(this)">
           <span class="_ad076">How do I receive my items?</span>
           <div class="_9ac6c">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#i-chev"/></svg>
           </div>
         </button>
         <div class="_d9db0">
@@ -2555,7 +2564,7 @@ html.bbx-home body::after{
         <button class="_a745c" onclick="toggleFAQ(this)">
           <span class="_ad076">I didn't receive my items, what do I do?</span>
           <div class="_9ac6c">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#i-chev"/></svg>
           </div>
         </button>
         <div class="_d9db0">
@@ -2570,7 +2579,7 @@ html.bbx-home body::after{
         <button class="_a745c" onclick="toggleFAQ(this)">
           <span class="_ad076">Can I get a refund?</span>
           <div class="_9ac6c">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#i-chev"/></svg>
           </div>
         </button>
         <div class="_d9db0">
@@ -2585,7 +2594,7 @@ html.bbx-home body::after{
         <button class="_a745c" onclick="toggleFAQ(this)">
           <span class="_ad076">Can I get free items?</span>
           <div class="_9ac6c">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#i-chev"/></svg>
           </div>
         </button>
         <div class="_d9db0">
@@ -2600,7 +2609,7 @@ html.bbx-home body::after{
         <button class="_a745c" onclick="toggleFAQ(this)">
           <span class="_ad076">How fast is delivery?</span>
           <div class="_9ac6c">
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            <svg viewBox="0 0 24 24"><use href="#i-chev"/></svg>
           </div>
         </button>
         <div class="_d9db0">
@@ -2690,13 +2699,21 @@ html.bbx-home body::after{
   <!-- Bottom Meadow Wave -->
   <div class="_e5551">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,100 L0,60 Q120,40 240,55 T480,50 T720,60 T960,45 T1200,55 T1440,50 L1440,100 Z" fill="#1E3A8A"/>
+      <path d="M0,100 L0,60 Q120,40 240,55 T480,50 T720,60 T960,45 T1200,55 T1440,50 L1440,100 Z" fill="#831843"/>
     </svg>
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" integrity="sha384-HAH79XdRvHr6axVGh4xQWVCp14kcd32bNk4Xu0sHDHtFQ42n6BAM8ykvB47dGz6D" crossorigin="anonymous"></script>
+<!-- confetti lazy-loaded on first Add to Cart -->
 <script>
+// ========== LAZY CONFETTI ==========
+var _confettiReady=null;
+function lazyConfetti(opts){
+  if(window.confetti){window.confetti(opts);return}
+  if(!_confettiReady){_confettiReady=new Promise(function(r){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';s.onload=r;document.head.appendChild(s)})}
+  _confettiReady.then(function(){window.confetti(opts)})
+}
+
 // ========== SECTION: HERO ==========
 (function(){const m=document.getElementById('gameModal'),o=document.getElementById('openModalBtn'),c=document.getElementById('closeModalBtn');if(!m||!o||!c)return;
 o.addEventListener('click',()=>{m.classList.add('active');document.body.style.overflow='hidden'});
@@ -2766,9 +2783,9 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
         const rect = card.getBoundingClientRect();
         const x = (rect.left + rect.width / 2) / window.innerWidth;
         const y = (rect.top + rect.height / 2) / window.innerHeight;
-        const colors = ['#2563EB', '#3B82F6', '#F59E0B', '#10B981', '#8B5CF6', '#06B6D4'];
+        const colors = ['#DB2777', '#EC4899', '#F59E0B', '#10B981', '#8B5CF6', '#06B6D4'];
 
-        confetti({
+        lazyConfetti({
           particleCount: 55,
           spread: 360,
           origin: { x: x, y: y },
@@ -2781,7 +2798,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
         });
 
         setTimeout(() => {
-          confetti({
+          lazyConfetti({
             particleCount: 25,
             spread: 360,
             origin: { x: x, y: y },
@@ -2799,7 +2816,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
         if(!celebration){
           celebration = document.createElement('div');
           celebration.className = '_131eb';
-          celebration.innerHTML = '<div class="_65b28"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>';
+          celebration.innerHTML = '<div class="_65b28"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></div>';
           card.appendChild(celebration);
         }
         celebration.classList.remove('show', 'fade');
@@ -2807,11 +2824,11 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
         celebration.classList.add('show');
 
         setTimeout(() => {
-          confetti({
+          lazyConfetti({
             particleCount: 35,
             spread: 360,
             origin: { x: x, y: y },
-            colors: ['#2563EB', '#EC4899', '#FBBF24', '#10B981', '#FFF'],
+            colors: ['#DB2777', '#EC4899', '#FBBF24', '#10B981', '#FFF'],
             startVelocity: 25,
             gravity: 0.8,
             scalar: 0.9,
@@ -2918,8 +2935,8 @@ window.addEventListener('resize', function() {
   var blobMouse=[22,-16,20,-14,12];
 
   // --- Floating orbs ---
-  var oCount=isMobile?2:isTouch?3:5;
-  var orbColors=['rgba(37,99,235,.2)','rgba(124,58,237,.18)','rgba(6,182,212,.2)','rgba(236,72,153,.16)','rgba(245,158,11,.15)'];
+  var oCount=isMobile?1:isTouch?2:3;
+  var orbColors=['rgba(219,39,119,.18)','rgba(244,114,182,.2)','rgba(253,164,175,.18)','rgba(251,113,133,.16)','rgba(190,24,93,.12)'];
   for(var i=0;i<oCount;i++){
     var orb=document.createElement('div');
     orb.setAttribute('data-particle','');
@@ -2928,15 +2945,25 @@ window.addEventListener('resize', function() {
     document.body.appendChild(orb);
   }
 
+
+  // --- Sakura petals ---
+  var petalCount=isMobile?4:7;
+  for(var p=0;p<petalCount;p++){
+    var petal=document.createElement('div');
+    petal.className='_sakura-petal';
+    petal.textContent=p%3===0?'\u{1F338}':p%3===1?'\u{1FAB7}':'\u2728';
+    petal.style.cssText='left:'+Math.random()*100+'%;font-size:'+(12+Math.random()*12)+'px;animation:sakura-fall '+(12+Math.random()*18)+'s linear infinite;animation-delay:'+(-Math.random()*25)+'s';
+    document.body.appendChild(petal);
+  }
   // --- Section blobs (desktop/tablet only) ---
   if(!isMobile){
     var blobGrads=[
-      'radial-gradient(circle,rgba(236,72,153,.25) 0%,rgba(236,72,153,.08) 40%,transparent 65%)',
-      'radial-gradient(circle,rgba(6,182,212,.22) 0%,rgba(6,182,212,.07) 40%,transparent 65%)',
-      'radial-gradient(circle,rgba(245,158,11,.2) 0%,rgba(245,158,11,.06) 40%,transparent 65%)',
-      'radial-gradient(circle,rgba(124,58,237,.22) 0%,rgba(124,58,237,.07) 40%,transparent 65%)'
+      'radial-gradient(circle,rgba(244,114,182,.2) 0%,rgba(244,114,182,.06) 40%,transparent 65%)',
+      'radial-gradient(circle,rgba(251,113,133,.18) 0%,rgba(251,113,133,.06) 40%,transparent 65%)',
+      'radial-gradient(circle,rgba(253,164,175,.2) 0%,rgba(253,164,175,.06) 40%,transparent 65%)',
+      'radial-gradient(circle,rgba(219,39,119,.16) 0%,rgba(219,39,119,.05) 40%,transparent 65%)'
     ];
-    var bCount=isTouch?1:2;
+    var bCount=1;
     document.querySelectorAll('._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
       for(var j=0;j<bCount;j++){
         var b=document.createElement('div');
@@ -2950,13 +2977,13 @@ window.addEventListener('resize', function() {
   // --- Scroll parallax shapes (desktop only) ---
   var pShapes=[];
   if(!isMobile){
-    var pCount=isTouch?1:2;
+    var pCount=1;
     document.querySelectorAll('._1e547,._99e1a,._fc821,._24fcc,._acc57').forEach(function(sec){
       for(var j=0;j<pCount;j++){
         var s=document.createElement('div');
         var sz=120+Math.random()*350;
         var isR=j%2===0;
-        var col=j%3===0?'rgba(124,58,237,.18)':j%3===1?'rgba(6,182,212,.15)':'rgba(236,72,153,.16)';
+        var col=j%3===0?'rgba(244,114,182,.16)':j%3===1?'rgba(251,113,133,.14)':'rgba(253,164,175,.15)';
         s.style.cssText='position:absolute;border-radius:50%;pointer-events:none;z-index:1;'+(isR?'border:2px solid '+col+';background:transparent;':'background:radial-gradient(circle,'+col+',transparent 70%);')+'width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*80)+'%;top:'+(Math.random()*80)+'%;';
         s._pS=0.03+Math.random()*0.12;
         sec.appendChild(s);
@@ -2965,47 +2992,31 @@ window.addEventListener('resize', function() {
     });
   }
 
-  // --- Unified rAF loop (one loop for all effects) ---
-  var scrollY=0,ticking=false;
-  window.addEventListener('scroll',function(){scrollY=window.scrollY;if(!ticking){requestAnimationFrame(tick);ticking=true}},{passive:true});
+  // --- Unified rAF loop (stops when idle) ---
+  var scrollY=0,ticking=false,glowFrames=0;
+  function scheduleFrame(){if(!ticking){requestAnimationFrame(tick);ticking=true}}
+  window.addEventListener('scroll',function(){scrollY=window.scrollY;scheduleFrame()},{passive:true});
+  if(!isTouch){document.addEventListener('mousemove',function(){glowFrames=20;scheduleFrame()},{passive:true})}
 
   function tick(){
-    // Hero mesh parallax
+    ticking=false;
     if(mesh)mesh.style.transform='translate3d(0,'+scrollY*.08+'px,0)';
-
-    // Blob scroll parallax + mouse
     for(var i=0;i<blobs.length;i++){
       var sy=scrollY*blobParallax[i];
       var bmx=0,bmy=0;
-      if(!isTouch){
-        bmx=(mx-0.5)*blobMouse[i];
-        bmy=(my-0.5)*blobMouse[i];
-      }
+      if(!isTouch){bmx=(mx-0.5)*blobMouse[i];bmy=(my-0.5)*blobMouse[i]}
       blobs[i].style.transform='translate3d('+bmx+'px,'+(sy+bmy)+'px,0)';
     }
-
-    // Section parallax shapes
     for(var j=0;j<pShapes.length;j++){
       pShapes[j].style.transform='translate3d(0,'+(-scrollY*pShapes[j]._pS)+'px,0)';
     }
-
-    // Cursor glow (smooth follow)
     if(!isTouch){
       gx+=(rawX-gx)*.07;gy+=(rawY-gy)*.07;
       glow.style.left=gx+'px';glow.style.top=gy+'px';
+      if(glowFrames-->0)scheduleFrame();
     }
-
-    ticking=false;
-    // Keep running for cursor smoothing
-    if(!isTouch)requestAnimationFrame(tick);
   }
-
-  // Start the loop
-  requestAnimationFrame(tick);
-  // Also tick on mouse move for responsive cursor
-  if(!isTouch){
-    document.addEventListener('mousemove',function(){if(!ticking){requestAnimationFrame(tick);ticking=true}},{passive:true});
-  }
+  scheduleFrame();
 })();
 
 // ===== SCROLL REVEAL =====
