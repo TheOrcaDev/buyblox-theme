@@ -3,10 +3,9 @@
 html{overflow-x:hidden}
 /* Scoped transparent wrappers — only when homepage section is present */
 html.bbx-home body,html.bbx-home #MainContent,html.bbx-home #MainContent>*,html.bbx-home .shopify-section,html.bbx-home main{background:transparent!important}
-html.bbx-home [id*="__header"],html.bbx-home [id*="__header"]>*,html.bbx-home [id*="__header"] .header-wrapper,html.bbx-home [id*="__header"] header{background:transparent!important;background-color:transparent!important;border-bottom:none!important;box-shadow:none!important}
+html.bbx-home .header-wrapper,html.bbx-home .section-header,html.bbx-home header.header,html.bbx-home .shopify-section-header,html.bbx-home #shopify-section-header,html.bbx-home .header__wrapper,html.bbx-home [id*="__header"],html.bbx-home [id*="__header"]>*{background:transparent!important;background-color:transparent!important;border-bottom:none!important;box-shadow:none!important}
+html.bbx-home .header-wrapper *:not(img):not(svg):not(svg *):not(button):not(a):not(span){background:transparent!important;background-color:transparent!important}
 html.bbx-home [id*="__announcement"],html.bbx-home [id*="__announcement"]>*{background:transparent!important;background-color:transparent!important}
-html.bbx-home .header-wrapper,html.bbx-home .header-wrapper *:not(img):not(svg):not(svg *):not(button):not(a):not(span):not(.menu__item){background:transparent!important;background-color:transparent!important}
-html.bbx-home .header,.bbx-home header.header-wrapper{border-bottom:none!important;box-shadow:none!important}
 html.bbx-home body::before{
   content:'';
   position:fixed;
@@ -120,16 +119,16 @@ html.bbx-home body::after{
 ._9e8f9 svg{width:16px;height:16px;fill:#00B67A}
 ._c7e67{font-size:14px;font-weight:600;color:#64748B}
 ._10727{font:900 clamp(36px,6vw,64px)/1.2 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 36px;letter-spacing:-.02em;color:#111;max-width:1100px;margin-left:auto;margin-right:auto}
-._10727 .accent{display:inline-block;background:linear-gradient(120deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
-@keyframes shimmer{0%,100%{background-position:0% 0%}50%{background-position:100% 0%}}
+._10727 .accent{display:inline-block}
+50%{background-position:100% 0%}}
 ._a0bd9{max-width:820px;margin:0 auto 40px;font:400 clamp(16px,1.6vw,18px)/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B}
 ._a0bd9 strong{color:#111;font-weight:700}
 @media (max-width:768px){._a0bd9{display:none}}
 ._79a7b{position:relative;display:inline-block;margin-bottom:24px}
-._ab1bb{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:24px 48px;background:linear-gradient(135deg,#FF6D00 0%,#FF8C42 100%);color:#FFF;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px;border-radius:16px;border:none;cursor:pointer;box-shadow:0 8px 30px rgba(255,109,0,.4);transition:all .3s cubic-bezier(.34,1.56,.64,1);text-decoration:none!important;animation:cta-glow 3s ease-in-out infinite;overflow:hidden}
+._ab1bb{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:24px 48px;background:linear-gradient(135deg,#E11D73 0%,#F43F7A 100%);color:#FFF;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px;border-radius:16px;border:none;cursor:pointer;box-shadow:0 8px 30px rgba(225,29,115,.4);transition:all .3s cubic-bezier(.34,1.56,.64,1);text-decoration:none!important;animation:cta-glow 3s ease-in-out infinite;overflow:hidden}
 ._ab1bb::before{content:'';position:absolute;top:0;left:-150%;width:200%;height:100%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.25) 45%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.25) 55%,transparent 60%);pointer-events:none;transition:left .6s cubic-bezier(.16,1,.3,1)}._ab1bb:hover::before{left:150%}
 ._ab1bb::after{--overflow-x:8px;content:'';position:absolute;top:-8px;left:calc(var(--overflow-x) * -1);display:none;border-image-slice:calc(6 * 56 / 20) fill;border-image-width:calc(32px / 3);border-image-repeat:round;width:calc(100% + var(--overflow-x) * 2);height:32px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));z-index:10;pointer-events:none}
-@keyframes cta-glow{0%,100%{box-shadow:0 8px 30px rgba(255,109,0,.4)}50%{box-shadow:0 12px 40px rgba(255,109,0,.5)}}
+@keyframes cta-glow{0%,100%{box-shadow:0 8px 30px rgba(225,29,115,.4)}50%{box-shadow:0 12px 40px rgba(225,29,115,.5)}}
 ._ab1bb span.btn-text{position:relative;z-index:1}
 ._ab1bb:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 16px 50px rgba(255,109,0,.5)}
 ._05edd{position:absolute;left:-120px;top:50%;width:120px;height:50px;pointer-events:none;animation:point-wiggle 2s ease-in-out infinite;transform:translateY(-50%)}
@@ -157,7 +156,7 @@ html.bbx-home body::after{
 ._36941{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0);z-index:100000;padding:20px;overflow-y:auto;transition:background .3s ease}
 ._36941.active{display:flex;align-items:center;justify-content:center;background:rgba(15,23,42,.9)}
 
-._73a03{position:relative;background:rgba(255,255,255,0.97);border-radius:28px;padding:40px 40px 36px;max-width:1100px;width:100%;box-shadow:0 40px 100px rgba(0,0,0,.5),0 0 60px rgba(0,0,0,.1);animation:popIn .4s cubic-bezier(.34,1.56,.64,1);border:4px solid #E5E7EB;overflow:visible;z-index:100001}
+._73a03{position:relative;background:rgba(255,255,255,0.97);border-radius:28px;padding:40px 40px 36px;max-width:1100px;width:100%;box-shadow:0 40px 100px rgba(0,0,0,.5),0 0 60px rgba(0,0,0,.1);animation:popIn .4s cubic-bezier(.34,1.56,.64,1);border:2px solid #FBCFE8;overflow:visible;z-index:100001}
 ._d0735{position:absolute;top:-50px;left:-75px;width:180px;height:auto;z-index:20;pointer-events:none;transform:rotate(-10deg)}
 ._d0735 img{width:100%;height:auto;filter:drop-shadow(0 6px 12px rgba(0,0,0,.5))}
 ._a5ea2{position:absolute;top:-2px;left:-2px;right:-2px;height:60px;background:linear-gradient(180deg,rgba(255,204,128,.3) 0%,transparent 100%);border-radius:28px 28px 0 0;pointer-events:none;z-index:1}
@@ -342,8 +341,8 @@ html.bbx-home body::after{
 ._1b73a{font:900 clamp(28px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 12px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 8s ease-in-out infinite;background-size:200% 100%}
 ._c8907{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
 ._68b84{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:3px solid var(--border);background:var(--bg);color:#111;font-weight:700;font-size:14px;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 12px rgba(17,17,17,.08);white-space:nowrap}
-._68b84:hover{border-color:#FF6D00;transform:translateY(-3px) scale(1.03);box-shadow:0 6px 16px rgba(255,109,0,.2)}
-._68b84.active{background:linear-gradient(135deg,#FF6D00,#FF8F00);border-color:#FF6D00;color:#FFF;box-shadow:0 8px 24px rgba(255,109,0,.4);transform:scale(1.05)}
+._68b84:hover{border-color:#FF6D00;transform:translateY(-3px) scale(1.03);box-shadow:0 6px 16px rgba(225,29,115,.2)}
+._68b84.active{background:linear-gradient(135deg,#FF6D00,#FF8F00);border-color:#FF6D00;color:#FFF;box-shadow:0 8px 24px rgba(255,109,0,.3);transform:scale(1.05)}
 ._68b84 .icon{width:22px;height:22px;transition:all .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1));flex-shrink:0}
 ._68b84:hover .icon{transform:scale(1.2) rotate(8deg)}
 ._68b84.active .icon{filter:drop-shadow(0 2px 8px rgba(255,255,255,.4));transform:scale(1.15)}
@@ -354,8 +353,8 @@ html.bbx-home body::after{
 @media (min-width:640px){._a0ccc{grid-template-columns:repeat(2,1fr);gap:20px}}
 @media (min-width:1024px){._a0ccc{grid-template-columns:repeat(4,1fr)}}
 ._698ac{position:relative;background:var(--bg);border:3px solid #E2E8F0;border-radius:18px;overflow:visible;text-decoration:none!important;color:#111;transition:all .35s cubic-bezier(.34,1.56,.64,1);box-shadow:0 6px 20px rgba(17,17,17,.1)}
-._698ac:hover{transform:translateY(-12px) scale(1.03) rotate(-1deg);box-shadow:0 24px 50px rgba(255,109,0,.25);border-color:#FF6D00}
-._698ac::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,transparent,rgba(255,109,0,.08));opacity:0;transition:opacity .3s ease;pointer-events:none;z-index:1}
+._698ac:hover{transform:translateY(-12px) scale(1.03) rotate(-1deg);box-shadow:0 24px 50px rgba(225,29,115,.25);border-color:#F9A8D4}
+._698ac::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,transparent,rgba(225,29,115,.04));opacity:0;transition:opacity .3s ease;pointer-events:none;z-index:1;border-radius:18px}
 ._698ac:hover::before{opacity:1}
 ._66c86{position:relative;width:100%;padding-top:100%;background:linear-gradient(135deg,#F9FAFB,#F3F4F6);overflow:hidden;border-radius:15px 15px 0 0}
 ._e8bd7{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
@@ -459,9 +458,9 @@ html.bbx-home body::after{
 ._5ae98{padding:20px;text-align:center;display:flex;flex-direction:column;flex:1}
 ._0de19{font-size:clamp(18px,2vw,22px);font-weight:900;color:#111;margin:0 0 10px}
 ._1db54{font-size:14px;font-weight:600;color:#64748B;margin:0 0 16px}
-._d310a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px 20px;background:linear-gradient(135deg,#DB2777 0%,#EC4899 100%);color:#FFF;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;border-radius:12px;border:none;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(219,39,119,.3);text-decoration:none!important;position:relative;overflow:hidden;white-space:nowrap}
+._d310a{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px 20px;background:linear-gradient(135deg,#FF6D00 0%,#FF8C42 100%);color:#FFF;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;border-radius:12px;border:none;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 12px rgba(255,109,0,.3);text-decoration:none!important;position:relative;overflow:hidden;white-space:nowrap}
 ._d310a::before{content:'';position:absolute;top:0;left:-150%;width:200%;height:100%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.2) 45%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.2) 55%,transparent 60%);pointer-events:none;transition:left .5s cubic-bezier(.16,1,.3,1)}._d310a:hover::before{left:150%}
-._d310a:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(219,39,119,.5);background:linear-gradient(135deg,#EC4899,#DB2777)}
+._d310a:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,109,0,.5);background:linear-gradient(135deg,#FF8C42,#FF6D00)}
 ._d310a svg{width:18px;height:18px;fill:currentColor;position:relative;z-index:1}
 ._d310a span{position:relative;z-index:1}
 ._535d0{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:100000;padding:20px;align-items:center;justify-content:center}
@@ -485,7 +484,7 @@ html.bbx-home body::after{
   --text: #111111;
   --bg: #FFFFFF;
   --blue: #DB2777;
-  --orange: #FF6D00;
+  --orange: #E11D73;
   --gray: #64748B;
   --light-gray: #FAFAFA;
   box-sizing: border-box;
@@ -543,7 +542,7 @@ html.bbx-home body::after{
   font: 900 clamp(28px, 5vw, 52px)/1.15 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
-  background: linear-gradient(110deg, #881337 0%, #BE185D 35%, #E11D73 65%, #F472B6 100%);
+  background: linear-gradient(110deg, #9D174D 0%, #BE185D 30%, #E11D73 60%, #F472B6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -761,7 +760,7 @@ html.bbx-home body::after{
   font: 900 clamp(32px, 5vw, 52px)/1.15 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
-  background: linear-gradient(110deg, #881337 0%, #BE185D 35%, #E11D73 65%, #F472B6 100%);
+  background: linear-gradient(110deg, #9D174D 0%, #BE185D 30%, #E11D73 60%, #F472B6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1072,7 +1071,7 @@ html.bbx-home body::after{
   --text: #111111;
   --bg: #FFFFFF;
   --blue: #DB2777;
-  --orange: #FF6D00;
+  --orange: #E11D73;
   --gray: #64748B;
   --light-gray: #FAFAFA;
   box-sizing: border-box;
@@ -1122,7 +1121,7 @@ html.bbx-home body::after{
   font: 900 clamp(32px, 5vw, 52px)/1.15 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
-  background: linear-gradient(110deg, #881337 0%, #BE185D 35%, #E11D73 65%, #F472B6 100%);
+  background: linear-gradient(110deg, #9D174D 0%, #BE185D 30%, #E11D73 60%, #F472B6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1584,6 +1583,73 @@ html.bbx-home body::after{
     font-size: 15px;
   }
 }
+
+/* ===== WOW: Animated gradient hero text ===== */
+._10727 .accent{background:linear-gradient(90deg,#E11D73,#F472B6,#DB2777,#E11D73);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-flow 4s ease infinite}
+@keyframes gradient-flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* ===== WOW: CTA glow pulse ===== */
+@keyframes cta-glow{0%,100%{box-shadow:0 8px 30px rgba(255,109,0,.35)}50%{box-shadow:0 10px 50px rgba(255,109,0,.55),0 0 80px rgba(255,109,0,.15)}}
+
+/* ===== WOW: Product card hover shine sweep ===== */
+._698ac::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transition:left .7s ease;pointer-events:none;z-index:3;border-radius:18px}
+._698ac:hover::after{left:150%}
+
+/* ===== WOW: Best Seller badge animated gradient border ===== */
+._83504{background:linear-gradient(135deg,#FF6D00,#FF8C42,#FFB74D,#FF6D00);background-size:200% 200%;animation:badge-shimmer 3s ease infinite}
+@keyframes badge-shimmer{0%{background-position:0% 50%;box-shadow:0 4px 16px rgba(255,109,0,.5)}50%{background-position:100% 50%;box-shadow:0 6px 28px rgba(255,109,0,.7)}100%{background-position:0% 50%;box-shadow:0 4px 16px rgba(255,109,0,.5)}}
+
+/* ===== WOW: Product card 3D perspective tilt ===== */
+._a0ccc{perspective:1200px}
+._698ac{transform-style:preserve-3d;transition:all .4s cubic-bezier(.34,1.56,.64,1)}
+._698ac:hover{transform:translateY(-14px) scale(1.03) rotateX(2deg) rotateY(-2deg);box-shadow:0 30px 60px rgba(225,29,115,.18),0 10px 20px rgba(0,0,0,.06)}
+
+/* ===== WOW: Trust card hover float + glow ===== */
+._1264f{transition:all .4s cubic-bezier(.34,1.56,.64,1)}
+._1264f:hover{transform:translateY(-8px);border-color:#F9A8D4;box-shadow:0 16px 40px rgba(225,29,115,.1),0 0 0 1px rgba(225,29,115,.05)}
+._1264f:hover ._dbe19{transform:scale(1.1) rotate(-5deg);background:linear-gradient(135deg,#FFF0F3,#FCE7F3)}
+
+/* ===== WOW: Review card glassmorphism ===== */
+._e70fc{background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+._e70fc:hover{background:rgba(255,255,255,.95);transform:translateY(-10px) scale(1.02);box-shadow:0 24px 50px rgba(225,29,115,.12)}
+
+/* ===== WOW: FAQ accordion smooth + glow ===== */
+._a8c26:hover{transform:translateY(-4px);border-color:#F9A8D4;box-shadow:0 12px 36px rgba(225,29,115,.08)}
+._a8c26.active{border-color:#E11D73;box-shadow:0 12px 36px rgba(225,29,115,.12)}
+._a8c26.active ._9ac6c{background:linear-gradient(135deg,#E11D73,#F43F7A)}
+
+/* ===== WOW: Game modal spring animation ===== */
+@keyframes popIn{0%{opacity:0;transform:scale(.85) translateY(30px)}60%{opacity:1;transform:scale(1.02) translateY(-5px)}100%{transform:scale(1) translateY(0)}}
+._73a03{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.95)}
+
+/* ===== WOW: Stagger reveal for product grid ===== */
+._698ac{opacity:0;transform:translateY(30px);animation:card-appear .5s ease forwards}
+._698ac:nth-child(1){animation-delay:.05s}._698ac:nth-child(2){animation-delay:.1s}._698ac:nth-child(3){animation-delay:.15s}._698ac:nth-child(4){animation-delay:.2s}._698ac:nth-child(5){animation-delay:.25s}._698ac:nth-child(6){animation-delay:.3s}._698ac:nth-child(7){animation-delay:.35s}._698ac:nth-child(8){animation-delay:.4s}
+@keyframes card-appear{to{opacity:1;transform:translateY(0)}}
+
+/* ===== WOW: How it works step cards ===== */
+._1ef0d{transition:all .4s cubic-bezier(.34,1.56,.64,1)}
+._1ef0d:hover{transform:translateY(-10px)}
+._1ef0d:hover ._0bba3{transform:scale(1.15);box-shadow:0 8px 30px rgba(225,29,115,.3)}
+
+/* ===== WOW: Floating action hint arrow ===== */
+._05edd{animation:arrow-bounce 2s ease-in-out infinite}
+@keyframes arrow-bounce{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+
+/* ===== WOW: View All button hover ===== */
+._60954{transition:all .3s cubic-bezier(.34,1.56,.64,1)}
+._60954:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 24px rgba(255,109,0,.2)}
+
+/* ===== WOW: Smooth tab switch ===== */
+._68b84{transition:all .3s cubic-bezier(.34,1.56,.64,1)}
+._a0ccc{transition:opacity .3s ease,transform .3s ease}
+._a0ccc.hidden{opacity:0;transform:translateY(10px)}
+._a0ccc.active{opacity:1;transform:translateY(0)}
+
+/* ===== WOW: Hero trust badge shimmer ===== */
+._a5a29{position:relative;overflow:hidden}
+._a5a29::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);animation:trust-shimmer 4s ease-in-out infinite;pointer-events:none;border-radius:inherit}
+@keyframes trust-shimmer{0%,100%{left:-100%}50%{left:150%}}
 /* ===== SCROLL REVEAL ===== */
 [data-reveal]{opacity:0;transform:translateY(50px) scale(.96);filter:blur(6px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1),filter .5s ease}
 [data-reveal].revealed{opacity:1;transform:none;filter:none}
@@ -2769,7 +2835,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
         const rect = card.getBoundingClientRect();
         const x = (rect.left + rect.width / 2) / window.innerWidth;
         const y = (rect.top + rect.height / 2) / window.innerHeight;
-        const colors = ['#DB2777', '#EC4899', '#F9A8D4', '#FF6D00', '#FBBF24', '#FFF'];
+        const colors = ['#FF6D00', '#FF8C42', '#F472B6', '#F9A8D4', '#FBBF24', '#FFF'];
 
         lazyConfetti({
           particleCount: 55,
@@ -2788,7 +2854,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
             particleCount: 25,
             spread: 360,
             origin: { x: x, y: y },
-            colors: ['#FFD700', '#FFF', '#FF6D00'],
+            colors: ['#FF6D00', '#F9A8D4', '#FFD700', '#FFF'],
             shapes: ['star'],
             startVelocity: 28,
             gravity: 0.5,
@@ -2814,7 +2880,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
             particleCount: 35,
             spread: 360,
             origin: { x: x, y: y },
-            colors: ['#DB2777', '#EC4899', '#F9A8D4', '#FBBF24', '#FFF'],
+            colors: ['#FF6D00', '#F472B6', '#F9A8D4', '#FBBF24', '#FFF'],
             startVelocity: 25,
             gravity: 0.8,
             scalar: 0.9,
@@ -2828,7 +2894,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contain
       }
 
       btn.innerHTML='<svg class="cart-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span>Added!</span>';
-      btn.style.background='linear-gradient(135deg,#FF6D00,#DB2777)';
+      btn.style.background='linear-gradient(135deg,#FF6D00,#FF8C42)';
       document.dispatchEvent(new CustomEvent('cart:refresh'));
       setTimeout(()=>{btn.innerHTML=originalHTML;btn.style.background='';btn.disabled=false},2000);
     }catch(error){
@@ -3013,6 +3079,50 @@ window.addEventListener('resize', function() {
   document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el)});
 })();
 
+
+// ========== WOW: Count-up animation ==========
+(function(){
+  var badge=document.querySelector('._c7e67');
+  if(!badge)return;
+  var target=200;
+  var done=false;
+  var obs=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!done){
+      done=true;
+      var start=0;
+      var duration=1800;
+      var startTime=null;
+      function step(ts){
+        if(!startTime)startTime=ts;
+        var progress=Math.min((ts-startTime)/duration,1);
+        var eased=1-Math.pow(1-progress,3);
+        var current=Math.floor(eased*target);
+        badge.textContent=current+'K+ Happy Customers';
+        if(progress<1)requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      obs.disconnect();
+    }
+  },{threshold:0.5});
+  obs.observe(badge);
+})();
+
+// ========== WOW: Tilt effect on product cards ==========
+(function(){
+  if(window.innerWidth<768||'ontouchstart' in window)return;
+  document.addEventListener('mousemove',function(e){
+    var card=e.target.closest('._698ac');
+    if(!card)return;
+    var rect=card.getBoundingClientRect();
+    var x=(e.clientX-rect.left)/rect.width-.5;
+    var y=(e.clientY-rect.top)/rect.height-.5;
+    card.style.transform='translateY(-14px) scale(1.03) rotateX('+(-y*6)+'deg) rotateY('+(x*6)+'deg)';
+  },{passive:true});
+  document.addEventListener('mouseleave',function(e){
+    var card=e.target.closest('._698ac');
+    if(card)card.style.transform='';
+  },true);
+})();
 // ===== DOMAIN CHECK =====
 (function(){
 var _h=window.location.hostname;
