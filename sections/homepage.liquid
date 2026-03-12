@@ -3,8 +3,11 @@
 html{overflow-x:hidden}
 /* Scoped transparent wrappers — only when homepage section is present */
 html.bbx-home body,html.bbx-home #MainContent,html.bbx-home #MainContent>*,html.bbx-home .shopify-section,html.bbx-home main{background:transparent!important}
-html.bbx-home .header-wrapper,html.bbx-home .section-header,html.bbx-home header.header,html.bbx-home .shopify-section-header,html.bbx-home #shopify-section-header,html.bbx-home .header__wrapper,html.bbx-home [id*="__header"],html.bbx-home [id*="__header"]>*{background:transparent!important;background-color:transparent!important;border-bottom:none!important;box-shadow:none!important}
-html.bbx-home .header-wrapper *:not(img):not(svg):not(svg *):not(button):not(a):not(span){background:transparent!important;background-color:transparent!important}
+/* Force header transparent by overriding Shopify's --color-background variable + direct backgrounds */
+html.bbx-home [id*="__header"]{--color-background:0 0 0 / 0!important}
+html.bbx-home .header-wrapper,html.bbx-home .section-header,html.bbx-home header.header,html.bbx-home .shopify-section-header,html.bbx-home #shopify-section-header,html.bbx-home .header__wrapper,html.bbx-home [id*="__header"],html.bbx-home [id*="__header"]>*,html.bbx-home .header-section,html.bbx-home .header-section .header,html.bbx-home sticky-header{background:transparent!important;background-color:transparent!important;border-bottom:none!important;box-shadow:none!important}
+html.bbx-home .header-wrapper *:not(img):not(svg):not(svg *):not(button):not(a):not(span),html.bbx-home sticky-header *:not(img):not(svg):not(svg *):not(button):not(a):not(span):not(.menu__item){background:transparent!important;background-color:transparent!important}
+html.bbx-home .header-section .header::before,html.bbx-home .header-wrapper::before,html.bbx-home header.header::before,html.bbx-home sticky-header::before,html.bbx-home [id*="__header"]::before{background:transparent!important;display:none!important}
 html.bbx-home [id*="__announcement"],html.bbx-home [id*="__announcement"]>*{background:transparent!important;background-color:transparent!important}
 html.bbx-home body::before{
   content:'';
@@ -27,13 +30,11 @@ html.bbx-home body::before{
 ._bbx-blob:nth-child(1){width:600px;height:600px;top:-5%;left:-8%;background:rgba(244,114,182,.25);opacity:.75;border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;animation:blob-morph-1 25s ease-in-out infinite}
 ._bbx-blob:nth-child(2){width:500px;height:500px;top:-3%;right:-8%;background:rgba(253,164,175,.22);opacity:.7;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;animation:blob-morph-2 30s ease-in-out infinite}
 ._bbx-blob:nth-child(3){width:550px;height:450px;bottom:8%;left:-3%;background:rgba(252,165,165,.22);opacity:.7;border-radius:40% 60% 70% 30% / 50% 60% 40% 50%;animation:blob-morph-3 28s ease-in-out infinite}
-._bbx-blob:nth-child(4){width:400px;height:400px;top:40%;right:0%;background:rgba(251,146,173,.2);opacity:.65;border-radius:70% 30% 50% 50% / 30% 50% 50% 70%;animation:blob-morph-4 22s ease-in-out infinite}
-._bbx-blob:nth-child(5){width:320px;height:320px;bottom:-2%;right:22%;background:rgba(219,39,119,.14);opacity:.6;border-radius:50% 50% 30% 70% / 60% 40% 60% 40%;animation:blob-morph-5 26s ease-in-out infinite}
+._bbx-blob:nth-child(4){display:none}
+._bbx-blob:nth-child(5){display:none}
 @keyframes blob-morph-1{0%,100%{border-radius:30% 70% 70% 30% / 30% 30% 70% 70%}25%{border-radius:58% 42% 55% 45% / 56% 45% 55% 44%}50%{border-radius:50% 50% 33% 67% / 55% 27% 73% 45%}75%{border-radius:33% 67% 58% 42% / 63% 68% 32% 37%}}
 @keyframes blob-morph-2{0%,100%{border-radius:60% 40% 30% 70% / 60% 30% 70% 40%}25%{border-radius:40% 60% 55% 45% / 35% 55% 45% 65%}50%{border-radius:55% 45% 65% 35% / 50% 60% 40% 50%}75%{border-radius:35% 65% 40% 60% / 65% 40% 60% 35%}}
 @keyframes blob-morph-3{0%,100%{border-radius:40% 60% 70% 30% / 50% 60% 40% 50%}25%{border-radius:65% 35% 45% 55% / 40% 50% 50% 60%}50%{border-radius:35% 65% 55% 45% / 60% 35% 65% 40%}75%{border-radius:55% 45% 35% 65% / 45% 65% 35% 55%}}
-@keyframes blob-morph-4{0%,100%{border-radius:70% 30% 50% 50% / 30% 50% 50% 70%}25%{border-radius:45% 55% 65% 35% / 55% 40% 60% 45%}50%{border-radius:55% 45% 35% 65% / 40% 65% 35% 60%}75%{border-radius:35% 65% 55% 45% / 65% 35% 65% 35%}}
-@keyframes blob-morph-5{0%,100%{border-radius:50% 50% 30% 70% / 60% 40% 60% 40%}25%{border-radius:35% 65% 60% 40% / 45% 55% 45% 55%}50%{border-radius:65% 35% 45% 55% / 55% 35% 65% 45%}75%{border-radius:45% 55% 55% 45% / 35% 65% 35% 65%}}
 @media (max-width:1024px){
   ._bbx-blob:nth-child(1){width:450px;height:450px}
   ._bbx-blob:nth-child(2){width:380px;height:380px}
@@ -125,10 +126,10 @@ html.bbx-home body::after{
 ._a0bd9 strong{color:#111;font-weight:700}
 @media (max-width:768px){._a0bd9{display:none}}
 ._79a7b{position:relative;display:inline-block;margin-bottom:24px}
-._ab1bb{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:24px 48px;background:linear-gradient(135deg,#E11D73 0%,#F43F7A 100%);color:#FFF;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px;border-radius:16px;border:none;cursor:pointer;box-shadow:0 8px 30px rgba(225,29,115,.4);transition:all .3s cubic-bezier(.34,1.56,.64,1);text-decoration:none!important;animation:cta-glow 3s ease-in-out infinite;overflow:hidden}
+._ab1bb{position:relative;display:inline-flex;align-items:center;justify-content:center;padding:24px 48px;background:linear-gradient(135deg,#FF6D00 0%,#FF8C42 100%);color:#FFF;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px;border-radius:16px;border:none;cursor:pointer;box-shadow:0 8px 30px rgba(255,109,0,.4);transition:all .3s cubic-bezier(.34,1.56,.64,1);text-decoration:none!important;animation:cta-glow 3s ease-in-out infinite;overflow:hidden}
 ._ab1bb::before{content:'';position:absolute;top:0;left:-150%;width:200%;height:100%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.25) 45%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.25) 55%,transparent 60%);pointer-events:none;transition:left .6s cubic-bezier(.16,1,.3,1)}._ab1bb:hover::before{left:150%}
 ._ab1bb::after{--overflow-x:8px;content:'';position:absolute;top:-8px;left:calc(var(--overflow-x) * -1);display:none;border-image-slice:calc(6 * 56 / 20) fill;border-image-width:calc(32px / 3);border-image-repeat:round;width:calc(100% + var(--overflow-x) * 2);height:32px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));z-index:10;pointer-events:none}
-@keyframes cta-glow{0%,100%{box-shadow:0 8px 30px rgba(225,29,115,.4)}50%{box-shadow:0 12px 40px rgba(225,29,115,.5)}}
+@keyframes cta-glow{0%,100%{box-shadow:0 8px 30px rgba(255,109,0,.35)}50%{box-shadow:0 10px 50px rgba(255,109,0,.55),0 0 80px rgba(255,109,0,.15)}}
 ._ab1bb span.btn-text{position:relative;z-index:1}
 ._ab1bb:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 16px 50px rgba(255,109,0,.5)}
 ._05edd{position:absolute;left:-120px;top:50%;width:120px;height:50px;pointer-events:none;animation:point-wiggle 2s ease-in-out infinite;transform:translateY(-50%)}
@@ -164,9 +165,9 @@ html.bbx-home body::after{
 ._a5ea2::after{display:none}
 ._235cb{display:none}
 ._f937c{display:none}
-@keyframes popIn{from{opacity:0;transform:scale(.88) translateY(40px)}to{opacity:1;transform:scale(1) translateY(0)}}
+/* popIn defined in WOW section below */
 ._5f05e{display:flex;align-items:center;justify-content:center;padding:0 0 28px;border-bottom:2px solid #E5E7EB;margin-bottom:28px;position:relative;z-index:2}
-._a1e40{margin:0;font-weight:900;letter-spacing:-.02em;font-size:42px;text-align:center;display:inline-block;background:linear-gradient(120deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
+._a1e40{margin:0;font-weight:900;letter-spacing:-.02em;font-size:42px;text-align:center;display:inline-block;background:linear-gradient(120deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-flow 6s ease-in-out infinite;background-size:200% 100%}
 ._a1e40::before{content:'✨ '}
 ._a1e40::after{content:' ✨'}
 ._53418{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;border:2px solid #F9A8D4;background:#FFF;cursor:pointer;color:#DB2777;transition:all .2s ease;position:absolute;right:-24px;top:-24px;z-index:3;box-shadow:0 4px 12px rgba(0,0,0,.1)}
@@ -318,27 +319,9 @@ html.bbx-home body::after{
 ._99e1a{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--text-light:#64748B;--border:#E2E8F0;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:transparent;overflow:hidden;margin-top:-1px}
 ._025ac{display:none;position:absolute;top:-1px;left:0;width:100%;height:120px;z-index:1;pointer-events:none}
 ._025ac svg{position:absolute;top:0;left:0;width:100%;height:100%}
-._61b61{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
-._476a0{position:absolute;top:-20px;color:#F9A8D4;opacity:0;animation:bbf-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
-._476a0:nth-child(1){left:3%;font-size:14px;animation-duration:14s;animation-delay:0s}
-._476a0:nth-child(2){left:10%;font-size:10px;animation-duration:18s;animation-delay:2s}
-._476a0:nth-child(3){left:18%;font-size:16px;animation-duration:12s;animation-delay:1s}
-._476a0:nth-child(4){left:25%;font-size:12px;animation-duration:16s;animation-delay:3s}
-._476a0:nth-child(5){left:33%;font-size:18px;animation-duration:13s;animation-delay:0.5s}
-._476a0:nth-child(6){left:40%;font-size:11px;animation-duration:15s;animation-delay:4s}
-._476a0:nth-child(7){left:48%;font-size:14px;animation-duration:14s;animation-delay:1.5s}
-._476a0:nth-child(8){left:55%;font-size:13px;animation-duration:16s;animation-delay:2.5s}
-._476a0:nth-child(9){left:63%;font-size:17px;animation-duration:12s;animation-delay:0s}
-._476a0:nth-child(10){left:70%;font-size:10px;animation-duration:18s;animation-delay:3.5s}
-._476a0:nth-child(11){left:78%;font-size:15px;animation-duration:13s;animation-delay:1s}
-._476a0:nth-child(12){left:85%;font-size:12px;animation-duration:15s;animation-delay:2s}
-._476a0:nth-child(13){left:92%;font-size:16px;animation-duration:14s;animation-delay:4.5s}
-._476a0:nth-child(14){left:7%;font-size:13px;animation-duration:17s;animation-delay:5s}
-._476a0:nth-child(15){left:52%;font-size:11px;animation-duration:16s;animation-delay:6s}
-@keyframes bbf-petalfall{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}5%{opacity:.7}50%{transform:translateY(50vh) translateX(20px) rotate(180deg);opacity:.8}95%{opacity:.6}100%{transform:translateY(100vh) translateX(-15px) rotate(360deg);opacity:0}}
 ._364cd{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:clamp(50px,6vw,70px) clamp(16px,4vw,40px) clamp(30px,4vw,50px)}
 ._e50ee{text-align:center;margin-bottom:clamp(14px,2.5vw,24px)}
-._1b73a{font:900 clamp(28px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 12px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 8s ease-in-out infinite;background-size:200% 100%}
+._1b73a{font:900 clamp(28px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 12px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-flow 8s ease-in-out infinite;background-size:200% 100%}
 ._c8907{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
 ._68b84{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:3px solid var(--border);background:var(--bg);color:#111;font-weight:700;font-size:14px;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 12px rgba(17,17,17,.08);white-space:nowrap}
 ._68b84:hover{border-color:#FF6D00;transform:translateY(-3px) scale(1.03);box-shadow:0 6px 16px rgba(225,29,115,.2)}
@@ -410,23 +393,9 @@ html.bbx-home body::after{
 ._fc821 *{font-family:'Outfit',ui-sans-serif,system-ui,sans-serif!important}
 ._fc821{--text:#111;--bg:#FFF;--highlight:#FF6D00;--orange:#FF6D00;--light-gray:#F5F5F5;box-sizing:border-box;position:relative;width:100vw;left:50%;margin-left:-50vw;padding:0;background:transparent;overflow:hidden}
 ._99e32{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
-._584bb{position:absolute;top:-20px;color:#F9A8D4;opacity:0;animation:bbh-petalfall linear infinite;text-shadow:0 0 4px rgba(255,255,255,.8)}
-._584bb:nth-child(1){left:5%;font-size:14px;animation-duration:14s;animation-delay:0s}
-._584bb:nth-child(2){left:15%;font-size:10px;animation-duration:18s;animation-delay:2s}
-._584bb:nth-child(3){left:25%;font-size:16px;animation-duration:12s;animation-delay:1s}
-._584bb:nth-child(4){left:35%;font-size:12px;animation-duration:16s;animation-delay:3s}
-._584bb:nth-child(5){left:45%;font-size:18px;animation-duration:13s;animation-delay:0.5s}
-._584bb:nth-child(6){left:55%;font-size:11px;animation-duration:15s;animation-delay:4s}
-._584bb:nth-child(7){left:65%;font-size:14px;animation-duration:14s;animation-delay:1.5s}
-._584bb:nth-child(8){left:75%;font-size:13px;animation-duration:16s;animation-delay:2.5s}
-._584bb:nth-child(9){left:85%;font-size:17px;animation-duration:12s;animation-delay:0s}
-._584bb:nth-child(10){left:95%;font-size:10px;animation-duration:18s;animation-delay:3.5s}
-._584bb:nth-child(11){left:10%;font-size:15px;animation-duration:13s;animation-delay:1s}
-._584bb:nth-child(12){left:90%;font-size:12px;animation-duration:15s;animation-delay:2s}
-@keyframes bbh-petalfall{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}5%{opacity:.7}50%{transform:translateY(50vh) translateX(20px) rotate(180deg);opacity:.8}95%{opacity:.6}100%{transform:translateY(100vh) translateX(-15px) rotate(360deg);opacity:0}}
 ._68c40{max-width:1280px;margin:0 auto;padding:clamp(50px,6vw,70px) clamp(20px,4vw,40px) clamp(30px,4vw,50px);position:relative;z-index:2}
 ._77450{text-align:center;margin-bottom:clamp(20px,3vw,32px)}
-._22888{font:900 clamp(32px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 16px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease-in-out infinite;background-size:200% 100%}
+._22888{font:900 clamp(32px,5vw,52px)/1.15 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0 0 16px;letter-spacing:-.02em;display:inline-block;background:linear-gradient(110deg,#831843 0%,#9D174D 30%,#DB2777 65%,#EC4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-flow 6s ease-in-out infinite;background-size:200% 100%}
 ._8d2b4{font:700 clamp(15px,1.6vw,18px)/1.4 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#64748B;max-width:800px;margin:0 auto}
 ._ac19c{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(24px,4vw,32px);margin-bottom:16px}
 @media (min-width:768px){._ac19c{grid-template-columns:repeat(3,1fr)}}
@@ -505,24 +474,6 @@ html.bbx-home body::after{
   z-index: 2;
 }
 
-/* Petals */
-._a512d {
-  position: absolute;
-  color: #F9A8D4;
-  pointer-events: none;
-  z-index: 1;
-  animation: bbtr-petalfall 15s ease-in-out infinite;
-  font-size: clamp(14px, 2vw, 22px);
-  opacity: 0;
-}
-
-@keyframes bbtr-petalfall {
-  0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.7; }
-  50% { opacity: 0.8; }
-  90% { opacity: 0.5; }
-  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-}
 
 /* ===== TRUST & SAFETY SECTION ===== */
 ._34e0e {
@@ -1041,9 +992,6 @@ html.bbx-home body::after{
     height: 50px;
   }
 
-  ._a512d {
-    font-size: 80% !important;
-  }
 
   ._1264f::before {
     height: 18px;
@@ -1092,24 +1040,6 @@ html.bbx-home body::after{
   z-index: 2;
 }
 
-/* Petals */
-._e145e {
-  position: absolute;
-  color: #F9A8D4;
-  pointer-events: none;
-  z-index: 1;
-  animation: bbfaq-petalfall 15s ease-in-out infinite;
-  font-size: clamp(14px, 2vw, 22px);
-  opacity: 0;
-}
-
-@keyframes bbfaq-petalfall {
-  0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.7; }
-  50% { opacity: 0.8; }
-  90% { opacity: 0.5; }
-  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-}
 
 /* Header */
 ._1620f {
@@ -1560,9 +1490,6 @@ html.bbx-home body::after{
     margin-top: 60px;
   }
 
-  ._e145e {
-    font-size: 80% !important;
-  }
 
   ._b703d {
     margin-top: 50px;
@@ -1588,9 +1515,6 @@ html.bbx-home body::after{
 ._10727 .accent{background:linear-gradient(90deg,#E11D73,#F472B6,#DB2777,#E11D73);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-flow 4s ease infinite}
 @keyframes gradient-flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-/* ===== WOW: CTA glow pulse ===== */
-@keyframes cta-glow{0%,100%{box-shadow:0 8px 30px rgba(255,109,0,.35)}50%{box-shadow:0 10px 50px rgba(255,109,0,.55),0 0 80px rgba(255,109,0,.15)}}
-
 /* ===== WOW: Product card hover shine sweep ===== */
 ._698ac::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transition:left .7s ease;pointer-events:none;z-index:3;border-radius:18px}
 ._698ac:hover::after{left:150%}
@@ -1609,8 +1533,8 @@ html.bbx-home body::after{
 ._1264f:hover{transform:translateY(-8px);border-color:#F9A8D4;box-shadow:0 16px 40px rgba(225,29,115,.1),0 0 0 1px rgba(225,29,115,.05)}
 ._1264f:hover ._dbe19{transform:scale(1.1) rotate(-5deg);background:linear-gradient(135deg,#FFF0F3,#FCE7F3)}
 
-/* ===== WOW: Review card glassmorphism ===== */
-._e70fc{background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+/* ===== WOW: Review card clean ===== */
+._e70fc{background:rgba(255,255,255,.92)}
 ._e70fc:hover{background:rgba(255,255,255,.95);transform:translateY(-10px) scale(1.02);box-shadow:0 24px 50px rgba(225,29,115,.12)}
 
 /* ===== WOW: FAQ accordion smooth + glow ===== */
@@ -1633,8 +1557,8 @@ html.bbx-home body::after{
 ._1ef0d:hover ._0bba3{transform:scale(1.15);box-shadow:0 8px 30px rgba(225,29,115,.3)}
 
 /* ===== WOW: Floating action hint arrow ===== */
-._05edd{animation:arrow-bounce 2s ease-in-out infinite}
-@keyframes arrow-bounce{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+._05edd{animation:point-wiggle 2s ease-in-out infinite}
+
 
 /* ===== WOW: View All button hover ===== */
 ._60954{transition:all .3s cubic-bezier(.34,1.56,.64,1)}
@@ -1670,6 +1594,10 @@ html.bbx-home body::after{
 
 @keyframes sakura-fall{0%{transform:translateY(-5vh) translateX(0) rotate(0deg);opacity:0}8%{opacity:.55}50%{transform:translateY(52vh) translateX(30px) rotate(180deg);opacity:.45}100%{transform:translateY(105vh) translateX(-20px) rotate(360deg);opacity:0}}
 ._sakura-petal{position:fixed;pointer-events:none;z-index:1;font-size:16px;opacity:0}
+/* ===== PERFORMANCE: Reduce motion for accessibility ===== */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+/* ===== PERFORMANCE: Content visibility for below-fold sections ===== */
+._99e1a,._fc821,._34e0e,._eb44d,._b703d{content-visibility:auto;contain-intrinsic-size:auto 800px}
 </style>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
 <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.4 1.2-6.9L1 8.8l7-1 3-6.3 3 6.3 7 1-5.1 5 1.2 6.9z"/></symbol>
@@ -1696,9 +1624,6 @@ html.bbx-home body::after{
   </div>
 
   <div class="_af8ad">
-    <div class="_96b55"></div>
-    <div class="_96b55"></div>
-    <div class="_96b55"></div>
     <div class="_96b55"></div>
     <div class="_96b55"></div>
     <div class="_96b55"></div>
@@ -2003,9 +1928,6 @@ html.bbx-home body::after{
 
 <!-- ========== SECTION: HOW IT WORKS ========== -->
 <section class="_fc821">
-<div class="_99e32">
-
-</div>
 <div class="_68c40">
 <div class="_77450">
 <h2 class="_22888">How BuyBlox Works</h2>
