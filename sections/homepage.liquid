@@ -13,8 +13,8 @@ html.bbx-home body::before{
     /* — subtle crosshatch (fades in after top 15%) — */
     repeating-linear-gradient(45deg,transparent,transparent 42px,rgba(236,72,153,.035) 42px,rgba(236,72,153,.035) 43px),
     repeating-linear-gradient(-45deg,transparent,transparent 42px,rgba(236,72,153,.035) 42px,rgba(236,72,153,.035) 43px),
-    /* — white at top, fading into sakura gradient — */
-    linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 8%,#FFF8FA 15%,#FFF5F7 22%,#FFF0F3 35%,#FFEEF2 50%,#FFF0F5 70%,#FFF5F7 100%);
+    /* — soft sakura tint throughout, white at very top — */
+    linear-gradient(180deg,#FFFFFF 0%,#FFF5F7 6%,#FFF0F3 15%,#FFEDF1 30%,#FFEBEF 50%,#FFEDF1 70%,#FFF0F3 85%,#FFF5F7 100%);
   background-size:auto,auto,auto;
   background-position:0 0,0 0,0 0;
 }
@@ -98,19 +98,31 @@ html.bbx-home body::after{
 
 /* ===== BACKGROUND SPRING ELEMENTS ===== */
 ._a1df0{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:hidden}
-/* Sakura branch decorations — like clouds in reference but cherry blossoms */
-._sk-branch{position:absolute;pointer-events:none;opacity:.6}
-._sk-branch svg{width:100%;height:100%;filter:drop-shadow(0 4px 12px rgba(219,39,119,.15))}
-._sk-branch:nth-child(1){width:180px;height:120px;top:5%;left:3%;animation:sk-drift-1 18s ease-in-out infinite}
-._sk-branch:nth-child(2){width:140px;height:100px;top:12%;right:5%;opacity:.5;animation:sk-drift-2 22s ease-in-out infinite}
-._sk-branch:nth-child(3){width:200px;height:130px;bottom:30%;left:-2%;opacity:.45;animation:sk-drift-1 25s ease-in-out infinite;animation-delay:-8s}
-._sk-branch:nth-child(4){width:160px;height:110px;bottom:20%;right:2%;opacity:.4;animation:sk-drift-2 20s ease-in-out infinite;animation-delay:-5s}
-._sk-branch:nth-child(5){width:120px;height:90px;top:40%;left:8%;opacity:.35;animation:sk-drift-1 24s ease-in-out infinite;animation-delay:-12s}
-._sk-branch:nth-child(6){width:100px;height:80px;top:55%;right:10%;opacity:.3;animation:sk-drift-2 21s ease-in-out infinite;animation-delay:-3s}
-@keyframes sk-drift-1{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(3deg)}}
-@keyframes sk-drift-2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(12px) rotate(-3deg)}}
-@media(max-width:768px){._sk-branch{opacity:.3}._sk-branch:nth-child(n+4){display:none}._sk-branch:nth-child(1){width:120px}._sk-branch:nth-child(2){width:100px}._sk-branch:nth-child(3){width:130px}}
-@media(max-width:480px){._sk-branch:nth-child(n+3){display:none}._sk-branch:nth-child(1){width:90px}._sk-branch:nth-child(2){width:80px}}
+/* Sakura cloud shapes — solid white-pink, bold like reference clouds */
+._sk-cloud{position:absolute;pointer-events:none;background:#FFF;border-radius:100px}
+._sk-cloud::before,._sk-cloud::after{content:'';position:absolute;background:#FFF;border-radius:50%}
+._sk-cloud:nth-child(1){width:240px;height:80px;top:2%;left:-2%;animation:sk-drift-1 20s ease-in-out infinite}
+._sk-cloud:nth-child(1)::before{width:110px;height:110px;top:-60px;left:35px}
+._sk-cloud:nth-child(1)::after{width:140px;height:100px;top:-50px;left:90px}
+._sk-cloud:nth-child(2){width:200px;height:70px;top:6%;right:3%;opacity:.85;animation:sk-drift-2 24s ease-in-out infinite}
+._sk-cloud:nth-child(2)::before{width:90px;height:90px;top:-50px;left:25px}
+._sk-cloud:nth-child(2)::after{width:115px;height:80px;top:-42px;left:75px}
+._sk-cloud:nth-child(3){width:280px;height:90px;bottom:22%;left:-4%;opacity:.75;animation:sk-drift-1 26s ease-in-out infinite;animation-delay:-8s}
+._sk-cloud:nth-child(3)::before{width:130px;height:120px;top:-65px;left:45px}
+._sk-cloud:nth-child(3)::after{width:160px;height:110px;top:-55px;left:110px}
+._sk-cloud:nth-child(4){width:220px;height:75px;bottom:12%;right:-1%;opacity:.7;animation:sk-drift-2 22s ease-in-out infinite;animation-delay:-5s}
+._sk-cloud:nth-child(4)::before{width:100px;height:100px;top:-55px;left:30px}
+._sk-cloud:nth-child(4)::after{width:125px;height:88px;top:-45px;left:85px}
+._sk-cloud:nth-child(5){width:160px;height:55px;top:42%;right:6%;opacity:.5;animation:sk-drift-1 28s ease-in-out infinite;animation-delay:-12s}
+._sk-cloud:nth-child(5)::before{width:75px;height:75px;top:-40px;left:20px}
+._sk-cloud:nth-child(5)::after{width:90px;height:65px;top:-34px;left:60px}
+._sk-cloud:nth-child(6){width:180px;height:60px;top:58%;left:3%;opacity:.45;animation:sk-drift-2 25s ease-in-out infinite;animation-delay:-3s}
+._sk-cloud:nth-child(6)::before{width:85px;height:85px;top:-45px;left:25px}
+._sk-cloud:nth-child(6)::after{width:100px;height:72px;top:-38px;left:70px}
+@keyframes sk-drift-1{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes sk-drift-2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+@media(max-width:768px){._sk-cloud:nth-child(n+4){display:none}._sk-cloud:nth-child(1){width:160px;height:55px;left:-6%}._sk-cloud:nth-child(2){width:130px;height:48px}._sk-cloud:nth-child(3){width:180px;height:62px}}
+@media(max-width:480px){._sk-cloud:nth-child(n+3){display:none}._sk-cloud:nth-child(1){width:120px;height:42px}._sk-cloud:nth-child(2){width:100px;height:38px}}
 
 /* ===== BOTTOM FADE ===== */
 ._0ac44{display:none}
@@ -1641,14 +1653,14 @@ html.bbx-home body::after{
 
   <div class="_0ac44"></div>
 
-  <!-- Sakura spring decorations -->
+  <!-- Sakura cloud decorations -->
   <div class="_a1df0">
-    <div class="_sk-branch"><svg viewBox="0 0 180 120" fill="none"><circle cx="40" cy="50" r="28" fill="rgba(244,114,182,.25)"/><circle cx="70" cy="35" r="22" fill="rgba(251,113,133,.2)"/><circle cx="55" cy="70" r="18" fill="rgba(253,164,175,.22)"/><circle cx="90" cy="55" r="15" fill="rgba(244,114,182,.18)"/><circle cx="30" cy="30" r="12" fill="rgba(251,113,133,.15)"/></svg></div>
-    <div class="_sk-branch"><svg viewBox="0 0 140 100" fill="none"><circle cx="70" cy="45" r="30" fill="rgba(253,164,175,.22)"/><circle cx="40" cy="35" r="20" fill="rgba(244,114,182,.2)"/><circle cx="95" cy="55" r="18" fill="rgba(251,113,133,.18)"/><circle cx="55" cy="65" r="14" fill="rgba(244,114,182,.15)"/></svg></div>
-    <div class="_sk-branch"><svg viewBox="0 0 200 130" fill="none"><circle cx="60" cy="60" r="35" fill="rgba(244,114,182,.2)"/><circle cx="100" cy="45" r="25" fill="rgba(253,164,175,.18)"/><circle cx="80" cy="85" r="20" fill="rgba(251,113,133,.16)"/><circle cx="130" cy="70" r="16" fill="rgba(244,114,182,.14)"/></svg></div>
-    <div class="_sk-branch"><svg viewBox="0 0 160 110" fill="none"><circle cx="80" cy="50" r="30" fill="rgba(251,113,133,.2)"/><circle cx="50" cy="40" r="22" fill="rgba(244,114,182,.18)"/><circle cx="110" cy="65" r="18" fill="rgba(253,164,175,.16)"/></svg></div>
-    <div class="_sk-branch"><svg viewBox="0 0 120 90" fill="none"><circle cx="55" cy="40" r="24" fill="rgba(244,114,182,.18)"/><circle cx="80" cy="55" r="18" fill="rgba(253,164,175,.15)"/><circle cx="35" cy="60" r="14" fill="rgba(251,113,133,.12)"/></svg></div>
-    <div class="_sk-branch"><svg viewBox="0 0 100 80" fill="none"><circle cx="50" cy="40" r="22" fill="rgba(253,164,175,.16)"/><circle cx="30" cy="30" r="16" fill="rgba(244,114,182,.14)"/><circle cx="70" cy="50" r="12" fill="rgba(251,113,133,.12)"/></svg></div>
+    <div class="_sk-cloud"></div>
+    <div class="_sk-cloud"></div>
+    <div class="_sk-cloud"></div>
+    <div class="_sk-cloud"></div>
+    <div class="_sk-cloud"></div>
+    <div class="_sk-cloud"></div>
   </div>
 
   <div class="_d389b">
